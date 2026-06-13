@@ -187,26 +187,88 @@ p {
 }
 
 @media(max-width:992px) {
-
     .top-navbar {
         display: none;
     }
 
-    .navbar-nav {
-        margin-top: 20px;
+    /* Hide default Bootstrap collapsible toggler button */
+    .navbar-toggler {
+        display: none !important;
+    }
 
+    /* Force the collapse container to display flex so it is visible and positioned on the right */
+    .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        width: auto;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    /* Hide standard nav links (they are inside the left sidebar drawer) */
+    .navbar-nav {
+        display: none !important;
+    }
+
+    /* Align right-section buttons horizontally on the right side */
+    .right-section {
+        margin-top: 0 !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 12px !important;
+        display: flex !important;
+    }
+
+    .right-section .icon-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-section .signin-btn {
+        padding: 6px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
+
+/* Extra small devices styling for compact mobile header */
+@media (max-width: 576px) {
+    .menu-btn {
+        margin-right: 10px !important;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .navbar-brand img {
+        width: 40px !important;
+    }
+
+    .logo-text {
+        font-size: 14px !important;
+        margin-left: 6px !important;
     }
 
     .right-section {
-        margin-top: 20px;
-        flex-direction: column;
-        align-items: flex-start;
+        gap: 8px !important;
     }
 
-    .nav-link {
-        margin: 8px 0;
+    .right-section .icon-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .right-section .signin-btn {
+        padding: 5px 10px;
+        font-size: 11px;
     }
 }
+
 
 .partners-content-box {
     background: #28002b;
