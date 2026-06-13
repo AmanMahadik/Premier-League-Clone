@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/table.css">
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Premier League Clone</title>
+</head>
+
+<body>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="sidebar-drawer" id="sidebarDrawer">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
+                <span class="logo-text">Premier<br>League</span>
+            </div>
+            <button class="close-sidebar-btn" id="closeSidebarBtn">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="sidebar-body">
+            <button class="sidebar-login-btn">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
+                Login
+            </button>
+                    <ul class="sidebar-nav-list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="matches.html">Matches</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="statistics.html">Statistics</a></li>
+            <li><a href="fantasy.html">Fantasy <i class="bi bi-chevron-right"></i></a></li>
+            <li><a href="transfers.html">Transfers</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a href="clubs.html">Clubs</a></li>
+            <li><a href="news.html">News <i class="bi bi-chevron-right"></i></a></li>
+            <li><a href="more.html">More <i class="bi bi-chevron-right"></i></a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="top-navbar">
+        <div class="container-fluid px-4">
+                        <ul class="top-menu">
+                <li><a href="home.html">Premier League</a></li>
+                <li><a href="https://shop.premierleague.com/gb/en/home/?_gl=1*ze5i2o*_gcl_au*MTA0NTIyNjQ2NS4xNzgxMTYwNzYz*_ga*MTI1NDc5NjI5OS4xNzY5MjczMDY4*_ga_Z815NWVZJY*czE3ODEyNzQ4OTAkbzMkZzAkdDE3ODEyNzQ4OTMkajU3JGwwJGgw" target="_blank">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="community.html">Football & Community</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="archive.html">The Archive</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navbar">
+
+        <div class="container-fluid">
+
+            <button class="menu-btn">
+                <i class="bi bi-list"></i>
+            </button>
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo"
+                    width="50">
+                <div class="logo-text">
+                    Premier<br>League
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="matches.html">Matches</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="table.html">Table</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="statistics.html">Statistics</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="fantasy.html">Fantasy</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="transfers.html">Transfers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="players.html">Players</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="clubs.html">Clubs</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="more.html">More</a>
+                    </li>
+
+                </ul>
+                <div class="right-section">
+                    <button class="icon-btn"><i class="bi bi-stars"></i></button>
+                    <button class="icon-btn"><i class="bi bi-search"></i></button>
+                    <button class="signin-btn">
+                        Sign in
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+    <div class="container my-5 pt-5">
+        <div class="outer-border-box">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="news-compartment p-0 border-0">
+                        <div id="heroNewsCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#heroNewsCarousel" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#heroNewsCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#heroNewsCarousel" data-bs-slide-to="2"></button>
+                            </div>
+                            <div class="carousel-inner h-100 rounded-3">
+                                <div class="carousel-item active h-100">
+                                    <img src="../IMAGES/world.jpg" class="d-block w-100 h-100 object-fit-cover"
+                                        alt="World Cup Trophy Preview" style="min-height: 400px;">
+                                    <div class="carousel-caption">
+                                        <span class="badge bg-danger mb-2">Features</span>
+                                        <h3 class="fw-bold text-white text-decoration-underline">Why EVERY team at FIFA
+                                            World Cup has Premier League link</h3>
+                                        <p class="text-white-50 d-none d-sm-block">We explain how all 48 nations in this
+                                            summer's tournament have connections to England's top flight.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="../IMAGES/odegaard.jpg" class="d-block w-100 h-100 object-fit-cover"
+                                        alt="Martin Odegaard Playing" style="min-height: 400px;">
+                                    <div class="carousel-caption">
+                                        <span class="badge bg-primary mb-2">Spotlight</span>
+                                        <h3 class="fw-bold text-white text-decoration-underline">Odegaard outlines
+                                            Arsenal ambitions for 2026/27</h3>
+                                        <p class="text-white-50 d-none d-sm-block">The Gunners skipper reviews training
+                                            plans and describes his desire to bring silverware to London.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="../IMAGES/edin.jpg" class="d-block w-100 h-100 object-fit-cover"
+                                        alt="Edin Dzeko Action" style="min-height: 400px;">
+                                    <div class="carousel-caption">
+                                        <span class="badge bg-success mb-2">Historical</span>
+                                        <h3 class="fw-bold text-white text-decoration-underline">Dzeko's memorable
+                                            Premier League milestones</h3>
+                                        <p class="text-white-50 d-none d-sm-block">Reliving Edin's classic matches and
+                                            vital goals that defined city rivalries during his tenure.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#heroNewsCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#heroNewsCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="news-compartment d-flex flex-column justify-content-between">
+                        <div>
+                            <img src="../IMAGES/ederson.jpg" class="hero-news-img rounded-2 mb-3" alt="Bebe News Pic"
+                                style="height: 180px;">
+                            <span class="text-white-50 x-small d-block mb-1">Transfers</span>
+                            <h5 class="fw-bold mb-2">Summer 2026 Premier League transfers and news</h5>
+                            <p class="text-white small">Keep track of every deal, official announcement, and major
+                                contract extensions across the clubs.</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <span class="badge bg-primary">Exclusive</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="../IMAGES/haaland.jpg" class="hero-news-img rounded-2 mb-3" alt="Haaland"
+                                style="height:180px; margin-top:10px;">
+
+                            <span class="text-white-50 x-small d-block mb-1">
+                                Player Spotlight
+                            </span>
+
+                            <h5 class="fw-bold mb-2">
+                                Haaland targets another Golden Boot in 2026/27
+                            </h5>
+
+                            <p class="text-white small">
+                                Manchester City's striker reflects on last season
+                                and explains how he plans to improve even further.
+                            </p>
+
+                            <div class="d-flex gap-2 mt-3">
+                                <span class="badge bg-primary">Exclusive</span>
+                                <span class="badge bg-success">Interview</span>
+                            </div>
+                        </div>
+
+                        <a href="#newsletter" class="btn btn-outline-light btn-sm w-100 border-secondary"
+                            style="margin-top:10px">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="news-compartment d-flex flex-column">
+                        <h5 class="text-white fw-bold mb-4 border-bottom border-secondary pb-2"><i
+                                class="bi bi-graph-up-arrow text-danger me-2"></i>Trending Now</h5>
+                        <ul class="list-unstyled d-flex flex-column gap-3 flex-grow-1">
+                            <li class="d-flex gap-2 align-items-start border-bottom border-secondary pb-2">
+                                <span class="text-danger fw-bold fs-5">1</span>
+                                <div>
+                                    <a href="#fixtures" class="text-white small text-decoration-none fw-medium">The
+                                        2026/27 Premier League fixtures officially released!</a>
+                                    <span class="text-white-50 d-block x-small">Matches</span>
+                                </div>
+                            </li>
+                            <li class="d-flex gap-2 align-items-start border-bottom border-secondary pb-2">
+                                <span class="text-danger fw-bold fs-5">2</span>
+                                <div>
+                                    <a href="#newsletter" class="text-white small text-decoration-none fw-medium">All
+                                        you need to know about the summer 2026 transfer window</a>
+                                    <span class="text-white-50 d-block x-small">Transfers</span>
+                                </div>
+                            </li>
+                            <li class="d-flex gap-2 align-items-start pb-2">
+                                <span class="text-danger fw-bold fs-5">3</span>
+                                <div>
+                                    <a href="#stats" class="text-white small text-decoration-none fw-medium">Robertson
+                                        writes heartfelt letter to Scotland supporters</a>
+                                    <span class="text-white-50 d-block x-small">News</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-auto">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="section-box">
+            <h2 class="section-title">Summer transfers</h2>
+            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam feugiat dolor ac pretium dictum. Pellentesque et est eget dolor convallis convallis.</p>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3">
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="Marcos Senesi">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Spurs sign Senesi as free agent after his Bournemouth exit</h5>
+                            <span class="epl-card-tag">Transfers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="Ewen Jaouen">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Newcastle sign French goalkeeper Ewen Jaouen from Reims</h5>
+                            <span class="epl-card-tag">Transfers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper" style="background: linear-gradient(135deg, #00d2ff 0%, #00ff87 100%); display: flex; align-items: center; justify-content: center; height: 100%;">
+                            <div class="text-center p-3">
+                                <span style="font-weight: 800; font-size: 1.1rem; color: #1e0021; letter-spacing: -0.5px; display: block;">Transfer Watch</span>
+                                <span style="font-size: 0.75rem; color: #1e0021; font-weight: 500;">BARCLAYS</span>
+                            </div>
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">All you need to know about the summer 2026 transfer window</h5>
+                            <span class="epl-card-tag">Transfers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544698310-74ea9d1c8258?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="Shirt confirm">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Senesi shirt number confirmed</h5>
+                            <span class="epl-card-tag">Transfers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="Raul Jimenez">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Raul Jimenez leaves Fulham to rejoin Wolves</h5>
+                            <span class="epl-card-tag">Transfers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more-container">
+                <button class="view-more-btn">View More</button>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2 class="section-title">News & Features</h2>
+            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum pretium tempor. Proin at sollicitudin quam, ac efficitur eros.</p>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3">
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="news">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Premier League clubs publish 2025/26 retained lists</h5>
+                            <span class="epl-card-tag">News</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="news">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">The Briefing: Palace 'close in on Sage', Jimenez's Wolves return and more</h5>
+                            <span class="epl-card-tag">News</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="news">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">AMAZING story of how Arteta, Alonso and Iraola played for same boys' team</h5>
+                            <span class="epl-card-tag">Features</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1431324155629-1a6edd1751fa?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="news">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">EIGHT reasons to be excited about the 2026/27 season</h5>
+                            <span class="epl-card-tag">Features</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1510563800743-aed2364902cb?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="news">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">When will the 2026/27 Premier League fixtures be released?</h5>
+                            <span class="epl-card-tag">News</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd6a?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="news">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Premier League club kits for 2026/27 season</h5>
+                            <span class="epl-card-tag">News</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1508847154043-be12a967dc12?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="news">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">What are the dates for 2026/27 Premier League season?</h5>
+                            <span class="epl-card-tag">Statements</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="news">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Summer 2026: Key football dates for your calendar</h5>
+                            <span class="epl-card-tag">News</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="news">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Premier League clubs' summer 2026 friendlies and tours</h5>
+                            <span class="epl-card-tag">News</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="news">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">New PUMA Premier League ball revealed for 2026/27 season</h5>
+                            <span class="epl-card-tag">News</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <h2 class="section-title">Games, Quizzes & Polls</h2>
+                    <p class="section-desc mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eleifend diam nec elit accumsan cursus.</p>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                    <button class="icon-btn" style="width: 32px; height: 32px; font-size: 12px;"><i class="bi bi-chevron-left"></i></button>
+                    <button class="icon-btn" style="width: 32px; height: 32px; font-size: 12px;"><i class="bi bi-chevron-right"></i></button>
+                    <a href="more.html" class="btn btn-outline-light btn-sm rounded-pill px-3 py-1 border-secondary x-small fw-bold text-decoration-none">More <i class="bi bi-chevron-right ms-1"></i></a>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3">
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="quiz">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Play Liverpool QUIZ for chance to win a prize</h5>
+                            <span class="epl-card-tag">Quizzes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="quiz">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">QUIZ: Can you spot the ball?</h5>
+                            <span class="epl-card-tag">Quizzes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="quiz">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">QUIZ: Which Premier League players' faces have we combined?</h5>
+                            <span class="epl-card-tag">Quizzes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="quiz">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">QUIZ: Guess the player from their BABY photo</h5>
+                            <span class="epl-card-tag">Quizzes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="quiz">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">QUIZ: Can you match the player to the celebration?</h5>
+                            <span class="epl-card-tag">Quizzes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h2 class="section-title">2025/26 season wrap</h2>
+            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed sem sit amet tortor viverra porta vitae in sem.</p>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3">
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="wrap">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Ultimate 2025/26 Quiz</h5>
+                            <span class="epl-card-tag">Quizzes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="wrap">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">2025/26 Stat Leaders</h5>
+                            <span class="epl-card-tag">Stats</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="wrap">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Fastest Premier League players</h5>
+                            <span class="epl-card-tag">Stats</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1606167668584-78701c57f13d?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="wrap">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">Are you a Premier League expert?</h5>
+                            <span class="epl-card-tag">Quizzes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="epl-card">
+                        <div class="epl-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=400&auto=format&fit=crop" class="epl-card-img" alt="wrap">
+                        </div>
+                        <div class="epl-card-body">
+                            <h5 class="epl-card-title">The COLDEST Premier League goals</h5>
+                            <span class="epl-card-tag">Features</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="epl-interactive-banner">
+        <div class="banner-slide-container">
+            <div class="banner-slide banner-slide-default">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" class="banner-logo" alt="logo" style="filter: brightness(0) saturate(100%) invert(8%) sepia(87%) saturate(1917%) hue-rotate(279deg) brightness(88%) contrast(105%);">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="banner-text-title">Premier League</span>
+                    <span class="banner-text-subtitle">More than a game.</span>
+                </div>
+            </div>
+            <div class="banner-slide banner-slide-hover">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" class="banner-logo" alt="logo" style="filter: brightness(0) saturate(100%) invert(8%) sepia(87%) saturate(1917%) hue-rotate(279deg) brightness(88%) contrast(105%);">
+                <span class="banner-text-title">We all feel it.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="partners-content-box">
+            <h2 class="partners-title">Premier League Partners</h2>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-weight: 900; font-style: italic; font-size: 1.3rem; letter-spacing: 0.5px; color: white;">EA SPORTS <span style="color: #00ff87;">FC</span></span>
+                    </div>
+                    <span class="partner-role">Lead Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#ff0000"><path d="M13.966 2.056L22.956 22H18.91l-3.328-7.978H9.366L13.966 2.056zm-4.708 14.93h5.056L12.062 11.56l-2.804 5.426zM1.044 2h7.324L1.044 22V2z"/></svg>
+                    </div>
+                    <span class="partner-role">Official Creativity Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#00aeef"><path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17V12L12 17L2 12V17Z"/></svg>
+                    </div>
+                    <span class="partner-role">Official Bank</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-family: 'Georgia', serif; font-weight: bold; font-style: italic; font-size: 1.4rem; color: #f40009; letter-spacing: -1px;">Coca-Cola</span>
+                    </div>
+                    <span class="partner-role">Official Soft Drink</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#d4af37"><path d="M12 2a10 10 0 00-7.54 16.58c.28.32.74.37 1.07.12l4.9-3.68a2 2 0 012.4 0l4.9 3.68c.33.25.79.2 1.07-.12A10 10 0 0012 2zm0 13.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/></svg>
+                    </div>
+                    <span class="partner-role">Official Beer</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 23 23" width="34" height="34"><rect width="10.5" height="10.5" fill="#f25022"/><rect x="11.5" width="10.5" height="10.5" fill="#7fba00"/><rect y="11.5" width="10.5" height="10.5" fill="#00a4ef"/><rect x="11.5" y="11.5" width="10.5" height="10.5" fill="#ffb900"/></svg>
+                    </div>
+                    <span class="partner-role">Official Cloud & AI Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="white"><path d="M22 6.5c-1.5 0-3 1.5-3 3s1.5 3 3 3 3-1.5 3-3-1.5-3-3-3zm-6 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4 14.5c.3 1.3 1.4 2.5 2.8 2.5h6.4c1.4 0 2.5-1.2 2.8-2.5l1-4.5H3l1 4.5z"/></svg>
+                    </div>
+                    <span class="partner-role">Official Ball</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-weight: 800; font-size: 0.95rem; letter-spacing: 0.5px; color: white;">AVERY DENNISON</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-weight: 700; font-size: 0.95rem; color: #ffb900;">FOOTBALL MANAGER</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-weight: 800; font-size: 1.1rem; font-style: italic; letter-spacing: 1px; color: white;">REZZIL</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; color: #00ff87;">sorare</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-family: 'Impact', sans-serif; font-size: 1.5rem; letter-spacing: 1px; color: #e90052; font-style: italic;">Topps</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-section mt-5">
+        <div class="container text-center">
+            <p class="text-white-50 small mb-0">&copy; Premier League Clone 2026.</p>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../SCRIPT/main.js"></script>
+
+</html>

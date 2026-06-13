@@ -1,0 +1,366 @@
+body {
+    background: #1e0021;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+.matches-banner {
+    background: linear-gradient(90deg, #7a1bf2 0%, #00d2ff 100%);
+    border-radius: 16px;
+    padding: 30px 40px;
+    margin-bottom: 20px;
+}
+
+.matches-banner-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.calendar-btn {
+    background: #1e0021;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.calendar-btn:hover {
+    opacity: 0.9;
+}
+
+.matches-tabs {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.matches-tab {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    font-size: 1rem;
+    padding-bottom: 12px;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.matches-tab:hover {
+    color: #ffffff;
+}
+
+.matches-tab.active {
+    color: #ffffff;
+}
+
+.matches-tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.filter-dropdown-btn {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.filter-dropdown-btn:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.reset-filter-btn {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.matchweek-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0 20px 0;
+}
+
+.nav-circle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nav-circle-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.matchweek-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.no-data-card {
+    background: #28002B;
+    border-radius: 16px;
+    padding: 35px 20px;
+    text-align: center;
+    margin: 20px 0 60px 0;
+}
+
+.no-data-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.news-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.news-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.scroll-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.matches-list-card {
+    background: #25002a;
+    border-radius: 16px;
+    padding: 30px 40px;
+    margin: 20px 0 60px 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.match-day-group {
+    margin-bottom: 30px;
+}
+
+.match-day-group:last-child {
+    margin-bottom: 0;
+}
+
+.match-day-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.match-day-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.live-blog-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.live-blog-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.match-rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.match-row {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.match-row:last-child {
+    border-bottom: none;
+}
+
+.match-status {
+    width: 40px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.match-teams-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-name {
+    width: 220px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.team-badge {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.match-score {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ffffff;
+    min-width: 65px;
+    text-align: center;
+}
+
+.news-card {
+    background: #25002a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.news-img-wrapper {
+    height: 160px;
+    overflow: hidden;
+}
+
+.news-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-card-body {
+    padding: 15px;
+}
+
+.news-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.45;
+}
+
+@media (max-width: 992px) {
+    .matches-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .matches-banner-title {
+        font-size: 1.8rem;
+    }
+    
+    .filter-bar {
+        gap: 8px;
+    }
+    
+    .no-data-card {
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .matches-list-card {
+        padding: 20px 15px;
+    }
+    
+    .team-name {
+        width: 100px;
+        font-size: 0.85rem;
+    }
+    
+    .match-score {
+        font-size: 0.95rem;
+        padding: 4px 10px;
+        min-width: 50px;
+    }
+    
+    .team-badge {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .match-teams-flex {
+        gap: 8px;
+    }
+}

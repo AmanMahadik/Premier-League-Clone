@@ -1,0 +1,177 @@
+body {
+    background: #1e0021;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+}
+
+.clubs-banner {
+    background: #37003c;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.clubs-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(circle at 100% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 85%),
+                      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 250' fill='none'%3E%3Cpath d='M1000 -50 L1200 250 L1350 250 L1150 -50 Z' fill='%23ffffff' fill-opacity='0.04'/%3E%3Cpath d='M1180 -50 L1380 250 L1530 250 L1330 -50 Z' fill='%23ffffff' fill-opacity='0.04'/%3E%3Cpath d='M820 -50 L1020 250 L1170 250 L970 -50 Z' fill='%23ffffff' fill-opacity='0.04'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+}
+
+.banner-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.filters-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.filter-btn,
+.filter-select {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-select {
+    padding-right: 32px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.filter-btn:hover,
+.filter-select:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #ffffff;
+}
+
+.section-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.clubs-grid-box {
+    margin-bottom: 60px;
+}
+
+.club-card {
+    background: #28002b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.club-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+    background: #310036;
+}
+
+.club-top-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.club-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.club-badge-container {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.club-badge-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.club-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.club-chevron {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.club-card:hover .club-chevron {
+    color: #ffffff;
+}
+
+.club-actions-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn-follow,
+.action-btn-visit {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.action-btn-follow:hover,
+.action-btn-visit:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}

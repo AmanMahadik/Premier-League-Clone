@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premier League Players">
+    <title>Players - Premier League Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+    <link rel="stylesheet" href="../CSS/players.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="sidebar-drawer" id="sidebarDrawer">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
+                <span class="logo-text">Premier<br>League</span>
+            </div>
+            <button class="close-sidebar-btn" id="closeSidebarBtn">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="sidebar-body">
+            <button class="sidebar-login-btn">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
+                Login
+            </button>
+            <ul class="sidebar-nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="fantasy.html">Fantasy <i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="transfers.html">Transfers</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="news.html">News <i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="more.html">More <i class="bi bi-chevron-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="top-navbar">
+        <div class="container-fluid px-4">
+            <ul class="top-menu">
+                <li><a href="home.html">Premier League</a></li>
+                <li><a href="https://shop.premierleague.com/gb/en/home/?_gl=1*ze5i2o*_gcl_au*MTA0NTIyNjQ2NS4xNzgxMTYwNzYz*_ga*MTI1NDc5NjI5OS4xNzY5MjczMDY4*_ga_Z815NWVZJY*czE3ODEyNzQ4OTAkbzMkZzAkdDE3ODEyNzQ4OTMkajU3JGwwJGgw"
+                        target="_blank">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="community.html">Football & Community</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="archive.html">The Archive</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container-fluid">
+            <button class="menu-btn">
+                <i class="bi bi-list"></i>
+            </button>
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo"
+                    width="50">
+                <div class="logo-text">
+                    Premier<br>League
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="matches.html">Matches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="table.html">Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="statistics.html">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fantasy.html">Fantasy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="transfers.html">Transfers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="players.html">Players</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clubs.html">Clubs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="more.html">More</a>
+                    </li>
+                </ul>
+                <div class="right-section">
+                    <button class="icon-btn"><i class="bi bi-stars"></i></button>
+                    <button class="icon-btn"><i class="bi bi-search"></i></button>
+                    <button class="signin-btn">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="players-banner">
+        <div class="container-fluid px-4">
+            <h1 class="banner-title">Players</h1>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="search-filters-box">
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6">
+                    <div class="search-wrapper">
+                        <i class="bi bi-search search-icon-inside"></i>
+                        <input type="text" class="search-input" placeholder="Search for a player...">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <select class="filter-select-player">
+                        <option value="">All Clubs</option>
+                        <option value="Arsenal">Arsenal</option>
+                        <option value="Aston Villa">Aston Villa</option>
+                        <option value="Bournemouth">Bournemouth</option>
+                        <option value="Brentford">Brentford</option>
+                        <option value="Brighton">Brighton</option>
+                        <option value="Chelsea">Chelsea</option>
+                        <option value="Coventry City">Coventry City</option>
+                        <option value="Crystal Palace">Crystal Palace</option>
+                        <option value="Everton">Everton</option>
+                        <option value="Fulham">Fulham</option>
+                        <option value="Hull City">Hull City</option>
+                        <option value="Ipswich Town">Ipswich Town</option>
+                        <option value="Leeds United">Leeds United</option>
+                        <option value="Liverpool">Liverpool</option>
+                        <option value="Manchester City">Manchester City</option>
+                        <option value="Manchester United">Manchester United</option>
+                        <option value="Newcastle United">Newcastle United</option>
+                        <option value="Nottingham Forest">Nottingham Forest</option>
+                        <option value="Sunderland">Sunderland</option>
+                        <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <select class="filter-select-player">
+                        <option value="">All Positions</option>
+                        <option value="Goalkeeper">Goalkeeper</option>
+                        <option value="Defender">Defender</option>
+                        <option value="Midfielder">Midfielder</option>
+                        <option value="Forward">Forward</option>
+                    </select>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <button class="player-reset-btn">
+                        <i class="bi ::before bi-arrow-counterclockwise"></i> Reset Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="players-grid-container">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="player-card">
+                        <div class="player-image-wrapper">
+                            <div class="player-club-badge-floating">
+                                <img src="https://resources.premierleague.com/premierleague25/badges-alt/43.svg"
+                                    alt="Manchester City">
+                            </div>
+                            <img src="https://resources.premierleague.com/premierleague25/photos/players/110x140/223094.png"
+                                alt="Erling Haaland" class="player-headshot">
+                        </div>
+                        <div class="player-info-box">
+                            <span class="player-jersey-number">9</span>
+                            <h3 class="player-full-name">Erling Haaland</h3>
+                            <div class="player-details-row">
+                                <span class="player-pos-badge">Forward</span>
+                                <span class="player-nat-flag">
+                                    <i class="bi bi-globe"></i> Norway
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="player-card">
+                        <div class="player-image-wrapper">
+                            <div class="player-club-badge-floating">
+                                <img src="https://resources.premierleague.com/premierleague25/badges-alt/3.svg"
+                                    alt="Arsenal">
+                            </div>
+                            <img src="https://resources.premierleague.com/premierleague/photos/players/250x250/p223340.png"
+                                alt="Bukayo Saka" class="player-headshot">
+                        </div>
+                        <div class="player-info-box">
+                            <span class="player-jersey-number">7</span>
+                            <h3 class="player-full-name">Bukayo Saka</h3>
+                            <div class="player-details-row">
+                                <span class="player-pos-badge">Forward</span>
+                                <span class="player-nat-flag">
+                                    <i class="bi bi-globe"></i> England
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="player-card">
+                        <div class="player-image-wrapper">
+                            <div class="player-club-badge-floating">
+                                <img src="https://resources.premierleague.com/premierleague25/badges-alt/14.svg"
+                                    alt="Liverpool">
+                            </div>
+                            <img src="https://resources.premierleague.com/premierleague25/photos/players/110x140/118748.png"
+                                alt="Mohamed Salah" class="player-headshot">
+                        </div>
+                        <div class="player-info-box">
+                            <span class="player-jersey-number">11</span>
+                            <h3 class="player-full-name">Mohamed Salah</h3>
+                            <div class="player-details-row">
+                                <span class="player-pos-badge">Forward</span>
+                                <span class="player-nat-flag">
+                                    <i class="bi bi-globe"></i> Egypt
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="player-card">
+                        <div class="player-image-wrapper">
+                            <div class="player-club-badge-floating">
+                                <img src="https://resources.premierleague.com/premierleague25/badges-alt/43.svg"
+                                    alt="Manchester City">
+                            </div>
+                            <img src="https://resources.premierleague.com/premierleague25/photos/players/110x140/466052.png"
+                                alt="Kevin De Bruyne" class="player-headshot">
+                        </div>
+                        <div class="player-info-box">
+                            <span class="player-jersey-number">10</span>
+                            <h3 class="player-full-name">Ryan Cherki</h3>
+                            <div class="player-details-row">
+                                <span class="player-pos-badge">Attacking Midfielder</span>
+                                <span class="player-nat-flag">
+                                    <i class="bi bi-globe"></i> France
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="player-card">
+                        <div class="player-image-wrapper">
+                            <div class="player-club-badge-floating">
+                                <img src="https://resources.premierleague.com/premierleague25/badges-alt/8.svg"
+                                    alt="Chelsea">
+                            </div>
+                            <img src="https://resources.premierleague.com/premierleague25/photos/players/110x140/244851.png"
+                                alt="Cole Palmer" class="player-headshot">
+                        </div>
+                        <div class="player-info-box">
+                            <span class="player-jersey-number">20</span>
+                            <h3 class="player-full-name">Cole Palmer</h3>
+                            <div class="player-details-row">
+                                <span class="player-pos-badge">Midfielder</span>
+                                <span class="player-nat-flag">
+                                    <i class="bi bi-globe"></i> England
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="player-card">
+                        <div class="player-image-wrapper">
+                            <div class="player-club-badge-floating">
+                                <img src="https://resources.premierleague.com/premierleague25/badges-alt/1.svg"
+                                    alt="Manchester United">
+                            </div>
+                            <img src="https://resources.premierleague.com/premierleague/photos/players/250x250/p141746.png"
+                                alt="Bruno Fernandes" class="player-headshot">
+                        </div>
+                        <div class="player-info-box">
+                            <span class="player-jersey-number">8</span>
+                            <h3 class="player-full-name">Bruno Fernandes</h3>
+                            <div class="player-details-row">
+                                <span class="player-pos-badge">Midfielder</span>
+                                <span class="player-nat-flag">
+                                    <i class="bi bi-globe"></i> Portugal
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="player-card">
+                        <div class="player-image-wrapper">
+                            <div class="player-club-badge-floating">
+                                <img src="https://resources.premierleague.com/premierleague25/badges-alt/6.svg"
+                                    alt="Tottenham Hotspur">
+                            </div>
+                            <img src="https://resources.premierleague.com/premierleague25/photos/players/110x140/212319.png"
+                                alt="Richarlison" class="player-headshot">
+                        </div>
+                        <div class="player-info-box">
+                            <span class="player-jersey-number">9</span>
+                            <h3 class="player-full-name">Richarlison</h3>
+                            <div class="player-details-row">
+                                <span class="player-pos-badge">Forward</span>
+                                <span class="player-nat-flag">
+                                    <i class="bi bi-globe"></i> Brazil
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="player-card">
+                        <div class="player-image-wrapper">
+                            <div class="player-club-badge-floating">
+                                <img src="https://resources.premierleague.com/premierleague25/badges-alt/7.svg"
+                                    alt="Aston Villa">
+                            </div>
+                            <img src="https://resources.premierleague.com/premierleague25/photos/players/110x140/178301.png"
+                                alt="Ollie-Watkins" class="player-headshot">
+                        </div>
+                        <div class="player-info-box">
+                            <span class="player-jersey-number">11</span>
+                            <h3 class="player-full-name">Ollie Watkins</h3>
+                            <div class="player-details-row">
+                                <span class="player-pos-badge">Forward</span>
+                                <span class="player-nat-flag">
+                                    <i class="bi bi-globe"></i> England
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="partners-content-box">
+            <h2 class="partners-title">Premier League Partners</h2>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span
+                            style="font-weight: 900; font-style: italic; font-size: 1.3rem; letter-spacing: 0.5px; color: white;">EA
+                            SPORTS <span style="color: #00ff87;">FC</span></span>
+                    </div>
+                    <span class="partner-role">Lead Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#ff0000">
+                            <path
+                                d="M13.966 2.056L22.956 22H18.91l-3.328-7.978H9.366L13.966 2.056zm-4.708 14.93h5.056L12.062 11.56l-2.804 5.426zM1.044 2h7.324L1.044 22V2z" />
+                        </svg>
+                    </div>
+                    <span class="partner-role">Official Creativity Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#00aeef">
+                            <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17V12L12 17L2 12V17Z" />
+                        </svg>
+                    </div>
+                    <span class="partner-role">Official Bank</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span
+                            style="font-family: 'Georgia', serif; font-weight: bold; font-style: italic; font-size: 1.4rem; color: #f40009; letter-spacing: -1px;">Coca-Cola</span>
+                    </div>
+                    <span class="partner-role">Official Soft Drink</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#d4af37">
+                            <path
+                                d="M12 2a10 10 0 00-7.54 16.58c.28.32.74.37 1.07.12l4.9-3.68a2 2 0 012.4 0l4.9 3.68c.33.25.79.2 1.07-.12A10 10 0 0012 2zm0 13.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" />
+                        </svg>
+                    </div>
+                    <span class="partner-role">Official Beer</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 23 23" width="34" height="34">
+                            <rect width="10.5" height="10.5" fill="#f25022" />
+                            <rect x="11.5" width="10.5" height="10.5" fill="#7fba00" />
+                            <rect y="11.5" width="10.5" height="10.5" fill="#00a4ef" />
+                            <rect x="11.5" y="11.5" width="10.5" height="10.5" fill="#ffb900" />
+                        </svg>
+                    </div>
+                    <span class="partner-role">Official Cloud & AI Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="white">
+                            <path
+                                d="M22 6.5c-1.5 0-3 1.5-3 3s1.5 3 3 3 3-1.5 3-3-1.5-3-3-3zm-6 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4 14.5c.3 1.3 1.4 2.5 2.8 2.5h6.4c1.4 0 2.5-1.2 2.8-2.5l1-4.5H3l1 4.5z" />
+                        </svg>
+                    </div>
+                    <span class="partner-role">Official Ball</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-weight: 800; font-size: 0.95rem; letter-spacing: 0.5px; color: white;">AVERY
+                            DENNISON</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-weight: 700; font-size: 0.95rem; color: #ffb900;">FOOTBALL MANAGER</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span
+                            style="font-weight: 800; font-size: 1.1rem; font-style: italic; letter-spacing: 1px; color: white;">REZZIL</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span
+                            style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; color: #00ff87;">sorare</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span
+                            style="font-family: 'Impact', sans-serif; font-size: 1.5rem; letter-spacing: 1px; color: #e90052; font-style: italic;">Topps</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-section mt-5">
+        <div class="container text-center">
+            <p class="text-white-50 small mb-0">&copy; Premier League Clone 2026.</p>
+        </div>
+    </footer>
+
+    <button id="backToTopBtn"><i class="bi bi-arrow-up-short"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../SCRIPT/main.js"></script>
+</body>
+
+</html>
