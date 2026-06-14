@@ -153,3 +153,23 @@
 .sidebar-nav-list li a:hover i {
     color: #ff005a;
 }
+
+.sidebar-submenu-list {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-left: 2px solid #EDE7F6;
+}
+
+.sidebar-submenu-list li a {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #572d60 !important;
+}
+
+.sidebar-submenu-list li a:hover {
+    color: #ff005a !important;
+}

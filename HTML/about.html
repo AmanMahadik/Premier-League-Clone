@@ -1,255 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About Premier League">
     <title>About Premier League</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../CSS/home.css">
     <link rel="stylesheet" href="../CSS/sidebar.css">
     <link rel="stylesheet" href="../CSS/about.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
 
-<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
-<div class="sidebar-drawer" id="sidebarDrawer">
-    <div class="sidebar-header">
-        <div class="sidebar-logo">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
-            <span class="logo-text">Premier<br>League</span>
-        </div>
-        <button class="close-sidebar-btn" id="closeSidebarBtn">
-            <i class="bi bi-x-lg"></i>
-        </button>
-    </div>
-    <div class="sidebar-body">
-        <button class="sidebar-login-btn">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
-            Login
-        </button>
-        <ul class="sidebar-nav-list">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="matches.html">Matches</a></li>
-            <li><a href="table.html">Table</a></li>
-            <li><a href="statistics.html">Statistics</a></li>
-            <li><a href="fantasy.html">Fantasy <i class="bi bi-chevron-right"></i></a></li>
-            <li><a href="transfers.html">Transfers</a></li>
-            <li><a href="players.html">Players</a></li>
-            <li><a href="clubs.html">Clubs</a></li>
-            <li><a href="news.html">News <i class="bi bi-chevron-right"></i></a></li>
-            <li><a href="more.html">More <i class="bi bi-chevron-right"></i></a></li>
-        </ul>
-    </div>
-</div>
-
-<div class="top-navbar">
-    <div class="container-fluid px-4">
-        <ul class="top-menu">
-            <li><a href="home.html">Premier League</a></li>
-            <li><a href="https://shop.premierleague.com/gb/en/home/?_gl=1*ze5i2o*_gcl_au*MTA0NTIyNjQ2NS4xNzgxMTYwNzYz*_ga*MTI1NDc5NjI5OS4xNzY5MjczMDY4*_ga_Z815NWVZJY*czE3ODEyNzQ4OTAkbzMkZzAkdDE3ODEyNzQ4OTMkajU3JGwwJGgw" target="_blank">Shop</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>
-            <li><a href="community.html">Football & Community</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="archive.html">The Archive</a></li>
-        </ul>
-    </div>
-</div>
-
-<nav class="navbar navbar-expand-lg main-navbar">
-    <div class="container-fluid">
-        <button class="menu-btn">
-            <i class="bi bi-list"></i>
-        </button>
-        <a class="navbar-brand d-flex align-items-center" href="home.html">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo" width="50">
-            <div class="logo-text">
-                Premier<br>League
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="sidebar-drawer" id="sidebarDrawer">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
+                <span class="logo-text">Premier<br>League</span>
             </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="matches.html">Matches</a></li>
-                <li class="nav-item"><a class="nav-link" href="table.html">Table</a></li>
-                <li class="nav-item"><a class="nav-link" href="statistics.html">Statistics</a></li>
-                <li class="nav-item"><a class="nav-link" href="fantasy.html">Fantasy</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-                <li class="nav-item"><a class="nav-link" href="transfers.html">Transfers</a></li>
-                <li class="nav-item"><a class="nav-link" href="players.html">Players</a></li>
-                <li class="nav-item"><a class="nav-link" href="clubs.html">Clubs</a></li>
-                <li class="nav-item"><a class="nav-link" href="more.html">More</a></li>
+            <button class="close-sidebar-btn" id="closeSidebarBtn">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="sidebar-body">
+            <button class="sidebar-login-btn">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
+                Login
+            </button>
+            <ul class="sidebar-nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="fantasy.html">Fantasy <i class="bi bi-chevron-right"></i></a></li>
+                <li><a href="transfers.html">Transfers</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="news.html">News <i class="bi bi-chevron-right"></i></a></li>
+                <li>
+                    <a href="#" class="sidebar-more-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sidebarMoreCollapse" aria-expanded="false">
+                        More <i class="bi bi-chevron-down ms-1"></i>
+                    </a>
+                    <div class="collapse" id="sidebarMoreCollapse">
+                        <ul class="sidebar-submenu-list">
+                            <li><a href="home.html">Premier League</a></li>
+                            <li><a href="https://shop.premierleague.com/gb/en/home/?_gl=1*ze5i2o*_gcl_au*MTA0NTIyNjQ2NS4xNzgxMTYwNzYz*_ga*MTI1NDc5NjI5OS4xNzY5MjczMDY4*_ga_Z815NWVZJY*czE3ODEyNzQ4OTAkbzMkZzAkdDE3ODEyNzQ4OTMkajU3JGwwJGgw" target="_blank">Shop</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="community.html">Football & Community</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="media.html">Media</a></li>
+                            <li><a href="archive.html">The Archive</a></li>
+                            <li><a href="more.html">Partners</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
-            <div class="right-section">
-                <button class="icon-btn"><i class="bi bi-stars"></i></button>
-                <button class="icon-btn"><i class="bi bi-search"></i></button>
-                <button class="signin-btn">Sign in</button>
-            </div>
         </div>
     </div>
-</nav>
 
-<div class="about-banner">
-    <div class="container-fluid px-4">
-        <h1 class="banner-title">About Premier League</h1>
-    </div>
-</div>
-
-<div class="container my-5">
-    <div class="about-content-box">
-        <div class="text-center mb-5">
-            <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200&auto=format&fit=crop" class="img-fluid rounded-4 about-hero-image" alt="Premier League Match Action">
-            <p class="text-white-50 mt-3 small">Find out more about how the Premier League is organised</p>
+    <div class="top-navbar">
+        <div class="container-fluid px-4">
+            <ul class="top-menu">
+                <li><a href="home.html">Premier League</a></li>
+                <li><a href="https://shop.premierleague.com/gb/en/home/?_gl=1*ze5i2o*_gcl_au*MTA0NTIyNjQ2NS4xNzgxMTYwNzYz*_ga*MTI1NDc5NjI5OS4xNzY5MjczMDY4*_ga_Z815NWVZJY*czE3ODEyNzQ4OTAkbzMkZzAkdDE3ODEyNzQ4OTMkajU3JGwwJGgw"
+                        target="_blank">Shop</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="community.html">Football & Community</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="archive.html">The Archive</a></li>
+            </ul>
         </div>
+    </div>
 
-        <div class="row g-4">
-            <div class="col-lg-8">
-                <div class="about-section">
-                    <h2>What we do</h2>
-                    <p>The Premier League is the organising body of the Premier League with responsibility for the competition, its Rule Book and the centralised broadcast and other commercial rights.</p>
-                    <p>We work proactively and constructively with our Member Clubs and the other football authorities to improve the quality of football, both in England and across the world.</p>
-                    <p class="text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam feugiat dolor ac pretium dictum. Pellentesque et est eget dolor convallis convallis. Duis elementum leo sit amet quam lobortis dictum. Fusce vulputate congue tristique. Suspendisse non sapien vel elit aliquet accumsan at et nisi.</p>
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container-fluid">
+            <button class="menu-btn">
+                <i class="bi bi-list"></i>
+            </button>
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo"
+                    width="50">
+                <div class="logo-text">
+                    Premier<br>League
                 </div>
-
-                <div class="about-section mt-5">
-                    <h2>The Premier League is all about the football</h2>
-                    <p>Football drives everything the Premier League does. Watching the best players and thrilling football generates local and global interest, with millions of fans across the country and billions around the world following the most-watched football league.</p>
-                    <p>This enables continued investment in the competition, development of talent and an unprecedented level of support for the football pyramid, wider game and communities.</p>
-                    <p>The positive impact and significant investment from the Premier League benefits clubs across the English Football League, National League System, women’s and girls’ football, national supporter groups, grassroots football and community provisions.</p>
-                    <p class="text-white-50">Sed eget nisl ac leo convallis elementum in at velit. Aliquam pulvinar luctus ipsum et scelerisque. Curabitur vel leo at nisi cursus tempor id id leo. Proin ultrices a lorem vel imperdiet. Vestibulum scelerisque, sapien a iaculis feugiat, nunc dolor porttitor sem, elementum vulputate lectus felis sed ligula.</p>
-                </div>
-
-                <div class="about-section mt-5">
-                    <h2>Competitive football, brilliant to watch</h2>
-                    <p>The principal objective of the Premier League is to stage the most competitive and compelling league with world-class players. The competitive balance of the League is maintained through the equitable distribution of revenue, enabling clubs to develop across their operations.</p>
-                    <p>Many of the most famous clubs in world football play in the Premier League and, in recent seasons, the battles for the title and UEFA Champions League places have been the tightest and hardest fought on record.</p>
-                    <p>Some of the biggest names in world football play in the Premier League every week: from Erling Haaland to Bruno Fernandes, Mohamed Salah to Martin Odegaard, Emiliano Martinez to Virgil van Dijk. The world’s best players come to England to play in a compelling league competition, in front of passionate full houses and matches that are seen all over the world.</p>
-                    <p>English talent is central to the continued progress of the Premier League and wider English game too. The Elite Player Performance Plan (EPPP) was produced by the Premier League after consulting representatives of the Football League and The FA to promote the development of a world-leading Academy system, with the aim of producing more, and better, Home Grown Players.</p>
-                    <p>Today, the likes of Phil Foden, Cole Palmer, Bukayo Saka and Declan Rice are thriving in the Premier League and on the international stage.</p>
-                    <p>The Premier League and its clubs are committed to generating domestic talent, with more than 95 per cent of young players in training being British.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="side-info-card p-4 rounded-3 mb-4">
-                    <h4>Overview</h4>
-                    <p class="small text-white-50">Headquarters: London, UK</p>
-                    <p class="small text-white-50">Founded: 27 May 1992</p>
-                    <p class="small text-white-50">Teams: 20 member clubs</p>
-                    <hr class="border-secondary">
-                    <h5>Key Initiatives</h5>
-                    <ul class="list-unstyled text-white-50 small">
-                        <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Elite Player Performance Plan</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> No Room for Racism Campaign</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Inside Matters Support Network</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Grassroots Funding Operations</li>
-                    </ul>
-                </div>
-                
-                <div class="side-info-card p-4 rounded-3">
-                    <h4>Community Links</h4>
-                    <p class="small text-white-50">Learn how the League supports football communities across Great Britain.</p>
-                    <a href="community.html" class="btn btn-outline-light w-100 btn-sm">Explore Community Work</a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="matches.html">Matches</a></li>
+                    <li class="nav-item"><a class="nav-link" href="table.html">Table</a></li>
+                    <li class="nav-item"><a class="nav-link" href="statistics.html">Statistics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fantasy.html">Fantasy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="transfers.html">Transfers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="players.html">Players</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clubs.html">Clubs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="more.html">More</a></li>
+                </ul>
+                <div class="right-section">
+                    <button class="icon-btn"><i class="bi bi-stars"></i></button>
+                    <button class="icon-btn"><i class="bi bi-search"></i></button>
+                    <button class="signin-btn">Sign in</button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </nav>
 
-<div class="container my-4">
-    <div class="partners-content-box">
-        <h2 class="partners-title">Premier League Partners</h2>
-        <div class="partners-grid">
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <span style="font-weight: 900; font-style: italic; font-size: 1.3rem; letter-spacing: 0.5px; color: white;">EA SPORTS <span style="color: #00ff87;">FC</span></span>
-                </div>
-                <span class="partner-role">Lead Partner</span>
+    <div class="about-banner">
+        <div class="container-fluid px-4">
+            <h1 class="banner-title">About Premier League</h1>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="about-content-box">
+            <div class="text-center mb-5">
+                <img src="https://resources.premierleague.pulselive.com/photo-resources/2025/06/16/7d925d26-d1cd-4ed3-8319-03d27f538540/GettyImages-2204671951.jpg?height=1080&width=1920"
+                    class="img-fluid rounded-4 about-hero-image" alt="Premier League Match Action">
+                <p class="text-white-50 mt-3 small">Find out more about how the Premier League is organised</p>
             </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <svg viewBox="0 0 24 24" width="34" height="34" fill="#ff0000"><path d="M13.966 2.056L22.956 22H18.91l-3.328-7.978H9.366L13.966 2.056zm-4.708 14.93h5.056L12.062 11.56l-2.804 5.426zM1.044 2h7.324L1.044 22V2z"/></svg>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="about-section">
+                        <h2>What we do</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla maiores eveniet, commodi
+                            perferendis dolorum odit odio, fuga, voluptatum vitae non praesentium. Dolorem veritatis
+                            dicta provident magnam animi nam quia quasi.
+                            Nisi tenetur temporibus provident doloremque placeat incidunt, illo dolorem molestiae earum
+                            hic, necessitatibus in quia dolores voluptatibus voluptates quod sunt, praesentium sed?
+                            Necessitatibus dicta quaerat porro ratione unde labore architecto!
+                            Officiis amet, dolores aperiam similique tempora obcaecati culpa corporis architecto
+                            reiciendis! Numquam deleniti ipsa laudantium voluptatum illo culpa ex dolores, doloribus
+                            corporis iure voluptatibus officia ad, cumque facere consequatur quas.
+                            Facilis qui iure adipisci distinctio voluptate perferendis obcaecati! A ratione facilis
+                            saepe ipsum officiis porro minima voluptatum quod minus debitis vero consequatur corporis
+                            soluta atque eligendi tempora omnis, deserunt magnam?</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat neque possimus in eius
+                            debitis voluptatem ipsum error molestias, itaque soluta enim quo iste aliquid magnam numquam
+                            est aspernatur pariatur ullam.
+                            Eum dolore, pariatur rerum obcaecati sapiente esse voluptatum incidunt ex porro
+                            perspiciatis, dolor odio totam. Nulla, repellat earum ea ex unde culpa porro dignissimos
+                            veniam non labore, nemo consequuntur accusamus..</p>
+                        <p class="text-white-50">Sed eget nisl ac leo convallis elementum in at velit. Aliquam pulvinar
+                            luctus ipsum et scelerisque. Curabitur vel leo at nisi cursus tempor id id leo. Proin
+                            sollicitudin dui non odio convallis, at sagittis odio imperdiet. Mauris vel odio ut magna
+                            bibendum hendrerit. Nullam vitae massa in velit mattis aliquet sed a libero.</p>
+                    </div>
+
+                    <div class="about-section mt-5">
+                        <h2>The Premier League is all about the football</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut atque ipsum illum dignissimos
+                            voluptates quisquam iure. Quam, quibusdam ratione? Omnis commodi unde obcaecati sapiente
+                            consequatur illum tempora quisquam, laborum id!
+                            Eaque iure ipsam, molestias facere suscipit esse sint, sunt porro, earum odio rerum numquam
+                            delectus culpa quia nulla laboriosam laudantium enim! Laborum architecto fugit ipsum! Nam
+                            exercitationem pariatur mollitia natus. </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ab facere mollitia! Assumenda
+                            expedita tenetur velit similique, dicta dolor. Reiciendis nemo in error neque sunt corporis
+                            natus porro officiis placeat!
+                            Iure saepe ipsum, labore obcaecati atque eos natus iste quasi animi aliquam molestiae?
+                            Aliquid minima perferendis natus aspernatur veniam deleniti aliquam dicta nostrum
+                            necessitatibus recusandae quis ducimus, molestias unde minus.
+                            Molestias, magni deserunt ratione dolores voluptas a libero mollitia ad repellat animi
+                            atque, aperiam eos, harum accusamus tempora ab provident odio excepturi aspernatur similique
+                            nobis molestiae placeat! Eum, suscipit animi.
+                            Voluptate quis odit aliquid autem corporis accusantium distinctio, rem id tempora porro
+                            sapiente eaque amet eum consequuntur fugiat eius alias delectus necessitatibus voluptatibus
+                            blanditiis iste hic incidunt provident quia. Adipisci.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum eligendi optio aliquam nemo.
+                            Vel aliquid, aliquam odio eius facilis ex voluptatibus quod sapiente provident tempora
+                            doloremque! Distinctio quia quod temporibus.
+                            Adipisci architecto, quaerat inventore impedit laborum nemo perferendis iure enim,
+                            consectetur iste veritatis temporibus, id officiis consequuntur nulla beatae. Temporibus eos
+                            reiciendis quas dolorem dolorum quidem repudiandae illum odio voluptas.
+                            Dicta hic natus deserunt commodi corrupti, dignissimos accusamus necessitatibus magni
+                            nostrum distinctio incidunt minima reiciendis aut officia assumenda odio sapiente minus
+                            dolorem ab. Exercitationem repellendus nemo perspiciatis, nisi earum nesciunt!</p>
+                        <p class="text-white-50">Sed eget nisl ac leo convallis elementum in at velit. Aliquam pulvinar
+                            luctus ipsum et scelerisque. Curabitur vel leo at nisi cursus tempor id id leo. Proin
+                            ultrices a lorem vel imperdiet. Vestibulum scelerisque, sapien a iaculis feugiat, nunc dolor
+                            porttitor sem, elementum vulputate lectus felis sed ligula.</p>
+                    </div>
+
+                    <div class="about-section mt-5">
+                        <h2>Competitive football, brilliant to watch</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis explicabo nulla
+                            impedit quaerat veritatis, eius voluptas fuga est, quasi nam cupiditate animi id obcaecati
+                            rem distinctio, tenetur doloremque expedita?
+                            Dolores rerum dolorum nisi. Fugiat adipisci veritatis reiciendis eligendi placeat cupiditate
+                            minus unde reprehenderit labore illo soluta, officia odio aliquam incidunt facilis tempora
+                            dolorem libero est dolore dolores veniam delectus!
+                            At sit magni officia eveniet impedit, corporis suscipit quasi, maxime labore accusamus
+                            voluptas cupiditate vel adipisci possimus sequi mollitia sint iusto. Omnis autem eos
+                            officiis molestiae nulla, dolorum dolor commodi.
+                            Voluptatibus, necessitatibus asperiores esse ullam perferendis dicta nihil fugiat possimus!
+                            Asperiores odit incidunt reprehenderit qui eius exercitationem repellendus magni laboriosam,
+                            quibusdam deserunt? Voluptatibus, labore culpa veniam maiores voluptates exercitationem
+                            nihil.
+                            Illum ipsum optio impedit aut incidunt. Totam et nemo earum officia natus aspernatur est
+                            recusandae aperiam excepturi temporibus nostrum delectus expedita cum facilis pariatur
+                            dolore sunt, aut accusamus ipsum quam.
+                        </p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut atque ipsum illum dignissimos
+                            voluptates quisquam iure. Quam, quibusdam ratione? Omnis commodi unde obcaecati sapiente
+                            consequatur illum tempora quisquam, laborum id!
+                            Eaque iure ipsam, molestias facere suscipit esse sint, sunt porro, earum odio rerum numquam
+                            delectus culpa quia nulla laboriosam laudantium enim! Laborum architecto fugit ipsum! Nam
+                            exercitationem pariatur mollitia natus. </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ab facere mollitia! Assumenda
+                            expedita tenetur velit similique, dicta dolor. Reiciendis nemo in error neque sunt corporis
+                            natus porro officiis placeat!
+                            Iure saepe ipsum, labore obcaecati atque eos natus iste quasi animi aliquam molestiae?
+                            Aliquid minima perferendis natus aspernatur veniam deleniti aliquam dicta nostrum
+                            necessitatibus recusandae quis ducimus, molestias unde minus.
+                            Molestias, magni deserunt ratione dolores voluptas a libero mollitia ad repellat animi
+                            atque, aperiam eos, harum accusamus tempora ab provident odio excepturi aspernatur similique
+                            nobis molestiae placeat! Eum, suscipit animi.
+                            Voluptate quis odit aliquid autem corporis accusantium distinctio, rem id tempora porro
+                            sapiente eaque amet eum consequuntur fugiat eius alias delectus necessitatibus voluptatibus
+                            blanditiis iste hic incidunt provident quia. Adipisci.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum eligendi optio aliquam nemo.
+                            Vel aliquid, aliquam odio eius facilis ex voluptatibus quod sapiente provident tempora
+                            doloremque! Distinctio quia quod temporibus.
+                            Adipisci architecto, quaerat inventore impedit laborum nemo perferendis iure enim,
+                            consectetur iste veritatis temporibus, id officiis consequuntur nulla beatae. Temporibus eos
+                            reiciendis quas dolorem dolorum quidem repudiandae illum odio voluptas.
+                            Dicta hic natus deserunt commodi corrupti, dignissimos accusamus necessitatibus magni
+                            nostrum distinctio incidunt minima reiciendis aut officia assumenda odio sapiente minus
+                            dolorem ab. Exercitationem repellendus nemo perspiciatis, nisi earum nesciunt!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem temporibus maxime
+                            architecto distinctio consequuntur laudantium, perferendis omnis est iste nam corporis,
+                            accusamus quam illum voluptas pariatur, nostrum quis asperiores? Fugiat?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse voluptates odit omnis!
+                            Consequuntur quasi repudiandae illo est aliquid omnis voluptatem porro ullam perspiciatis
+                            corporis, magnam praesentium quibusdam excepturi repellendus?</p>
+                    </div>
                 </div>
-                <span class="partner-role">Official Creativity Partner</span>
-            </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <svg viewBox="0 0 24 24" width="34" height="34" fill="#00aeef"><path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17V12L12 17L2 12V17Z"/></svg>
+
+                <div class="col-lg-4">
+                    <div class="side-info-card p-4 rounded-3 mb-4">
+                        <h4>Overview</h4>
+                        <p class="small text-white-50">Headquarters: London, UK</p>
+                        <p class="small text-white-50">Founded: 27 May 1992</p>
+                        <p class="small text-white-50">Teams: 20 member clubs</p>
+                        <hr class="border-secondary">
+                        <h5>Key Initiatives</h5>
+                        <ul class="list-unstyled text-white-50 small">
+                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Elite Player
+                                Performance Plan</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> No Room for Racism
+                                Campaign</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Inside Matters
+                                Support Network</li>
+                            <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Grassroots Funding
+                                Operations</li>
+                        </ul>
+                    </div>
+
+                    <div class="side-info-card p-4 rounded-3">
+                        <h4>Community Links</h4>
+                        <p class="small text-white-50">Learn how the League supports football communities across Great
+                            Britain.</p>
+                        <a href="community.html" class="btn btn-outline-light w-100 btn-sm">Explore Community Work</a>
+                    </div>
                 </div>
-                <span class="partner-role">Official Bank</span>
-            </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <span style="font-family: 'Georgia', serif; font-weight: bold; font-style: italic; font-size: 1.4rem; color: #f40009; letter-spacing: -1px;">Coca-Cola</span>
-                </div>
-                <span class="partner-role">Official Soft Drink</span>
-            </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <svg viewBox="0 0 24 24" width="34" height="34" fill="#d4af37"><path d="M12 2a10 10 0 00-7.54 16.58c.28.32.74.37 1.07.12l4.9-3.68a2 2 0 012.4 0l4.9 3.68c.33.25.79.2 1.07-.12A10 10 0 0012 2zm0 13.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/></svg>
-                </div>
-                <span class="partner-role">Official Beer</span>
-            </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <svg viewBox="0 0 23 23" width="34" height="34"><rect width="10.5" height="10.5" fill="#f25022"/><rect x="11.5" width="10.5" height="10.5" fill="#7fba00"/><rect y="11.5" width="10.5" height="10.5" fill="#00a4ef"/><rect x="11.5" y="11.5" width="10.5" height="10.5" fill="#ffb900"/></svg>
-                </div>
-                <span class="partner-role">Official Cloud & AI Partner</span>
-            </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <svg viewBox="0 0 24 24" width="34" height="34" fill="white"><path d="M22 6.5c-1.5 0-3 1.5-3 3s1.5 3 3 3 3-1.5 3-3-1.5-3-3-3zm-6 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4 14.5c.3 1.3 1.4 2.5 2.8 2.5h6.4c1.4 0 2.5-1.2 2.8-2.5l1-4.5H3l1 4.5z"/></svg>
-                </div>
-                <span class="partner-role">Official Ball</span>
-            </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <span style="font-weight: 800; font-size: 0.95rem; letter-spacing: 0.5px; color: white;">AVERY DENNISON</span>
-                </div>
-                <span class="partner-role">Official Licensee</span>
-            </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <span style="font-weight: 700; font-size: 0.95rem; color: #ffb900;">FOOTBALL MANAGER</span>
-                </div>
-                <span class="partner-role">Official Licensee</span>
-            </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <span style="font-weight: 800; font-size: 1.1rem; font-style: italic; letter-spacing: 1px; color: white;">REZZIL</span>
-                </div>
-                <span class="partner-role">Official Licensee</span>
-            </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <span style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; color: #00ff87;">sorare</span>
-                </div>
-                <span class="partner-role">Official Licensee</span>
-            </div>
-            <div class="partner-card">
-                <div class="partner-logo-wrapper">
-                    <span style="font-family: 'Impact', sans-serif; font-size: 1.5rem; letter-spacing: 1px; color: #e90052; font-style: italic;">Topps</span>
-                </div>
-                <span class="partner-role">Official Licensee</span>
             </div>
         </div>
     </div>
-</div>
 
-<footer class="footer-section mt-5">
-    <div class="container text-center">
-        <p class="text-white-50 small mb-0">&copy; Premier League Clone 2026.</p>
+    <div class="container my-4">
+        <div class="partners-content-box">
+            <h2 class="partners-title">Premier League Partners</h2>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span
+                            style="font-weight: 900; font-style: italic; font-size: 1.3rem; letter-spacing: 0.5px; color: white;">EA
+                            SPORTS <span style="color: #00ff87;">FC</span></span>
+                    </div>
+                    <span class="partner-role">Lead Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#ff0000">
+                            <path
+                                d="M13.966 2.056L22.956 22H18.91l-3.328-7.978H9.366L13.966 2.056zm-4.708 14.93h5.056L12.062 11.56l-2.804 5.426zM1.044 2h7.324L1.044 22V2z" />
+                        </svg>
+                    </div>
+                    <span class="partner-role">Official Creativity Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#00aeef">
+                            <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17V12L12 17L2 12V17Z" />
+                        </svg>
+                    </div>
+                    <span class="partner-role">Official Bank</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span
+                            style="font-family: 'Georgia', serif; font-weight: bold; font-style: italic; font-size: 1.4rem; color: #f40009; letter-spacing: -1px;">Coca-Cola</span>
+                    </div>
+                    <span class="partner-role">Official Soft Drink</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#d4af37">
+                            <path
+                                d="M12 2a10 10 0 00-7.54 16.58c.28.32.74.37 1.07.12l4.9-3.68a2 2 0 012.4 0l4.9 3.68c.33.25.79.2 1.07-.12A10 10 0 0012 2zm0 13.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" />
+                        </svg>
+                    </div>
+                    <span class="partner-role">Official Beer</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 23 23" width="34" height="34">
+                            <rect width="10.5" height="10.5" fill="#f25022" />
+                            <rect x="11.5" width="10.5" height="10.5" fill="#7fba00" />
+                            <rect y="11.5" width="10.5" height="10.5" fill="#00a4ef" />
+                            <rect x="11.5" y="11.5" width="10.5" height="10.5" fill="#ffb900" />
+                        </svg>
+                    </div>
+                    <span class="partner-role">Official Cloud & AI Partner</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="white">
+                            <path
+                                d="M22 6.5c-1.5 0-3 1.5-3 3s1.5 3 3 3 3-1.5 3-3-1.5-3-3-3zm-6 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4 14.5c.3 1.3 1.4 2.5 2.8 2.5h6.4c1.4 0 2.5-1.2 2.8-2.5l1-4.5H3l1 4.5z" />
+                        </svg>
+                    </div>
+                    <span class="partner-role">Official Ball</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-weight: 800; font-size: 0.95rem; letter-spacing: 0.5px; color: white;">AVERY
+                            DENNISON</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span style="font-weight: 700; font-size: 0.95rem; color: #ffb900;">FOOTBALL MANAGER</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span
+                            style="font-weight: 800; font-size: 1.1rem; font-style: italic; letter-spacing: 1px; color: white;">REZZIL</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span
+                            style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; color: #00ff87;">sorare</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo-wrapper">
+                        <span
+                            style="font-family: 'Impact', sans-serif; font-size: 1.5rem; letter-spacing: 1px; color: #e90052; font-style: italic;">Topps</span>
+                    </div>
+                    <span class="partner-role">Official Licensee</span>
+                </div>
+            </div>
+        </div>
     </div>
-</footer>
 
-<button id="backToTopBtn"><i class="bi bi-arrow-up-short"></i></button>
+    <footer class="footer-section mt-5">
+        <div class="container text-center">
+            <p class="text-white-50 small mb-0">&copy; Premier League Clone 2026.</p>
+        </div>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../SCRIPT/main.js"></script>
+    <button id="backToTopBtn"><i class="bi bi-arrow-up-short"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../SCRIPT/main.js"></script>
 </body>
+
 </html>

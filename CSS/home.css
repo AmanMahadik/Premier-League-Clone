@@ -13,6 +13,10 @@ p {
     color: white;
 }
 
+h5 {
+    color: #FFFFFF !important;
+}
+
 .top-navbar {
     background: #1E0021;
     border-bottom: 1px solid #4d0d59;
