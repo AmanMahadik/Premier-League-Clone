@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Dynamic routing for Sign In and Sidebar Login buttons to signin.html
     const signinBtns = document.querySelectorAll('.signin-btn, .sidebar-login-btn');
     signinBtns.forEach(btn => {
         btn.addEventListener('click', function () {

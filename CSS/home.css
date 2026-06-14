@@ -191,12 +191,10 @@ p {
         display: none;
     }
 
-    /* Hide default Bootstrap collapsible toggler button */
     .navbar-toggler {
         display: none !important;
     }
 
-    /* Force the collapse container to display flex so it is visible and positioned on the right */
     .navbar-collapse {
         display: flex !important;
         flex-basis: auto;
@@ -205,12 +203,10 @@ p {
         justify-content: flex-end;
     }
 
-    /* Hide standard nav links (they are inside the left sidebar drawer) */
     .navbar-nav {
         display: none !important;
     }
 
-    /* Align right-section buttons horizontally on the right side */
     .right-section {
         margin-top: 0 !important;
         flex-direction: row !important;
@@ -235,7 +231,6 @@ p {
     }
 }
 
-/* Extra small devices styling for compact mobile header */
 @media (max-width: 576px) {
     .menu-btn {
         margin-right: 10px !important;

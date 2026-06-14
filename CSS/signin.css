@@ -13,7 +13,6 @@ body {
     width: 100%;
 }
 
-/* Form Section (Left Side) */
 .form-section {
     flex: 1.2;
     padding: 40px 60px;
@@ -47,7 +46,6 @@ body {
     line-height: 1.1;
 }
 
-/* Tabs */
 .tab-container {
     display: flex;
     background: #2b0032;
@@ -76,7 +74,6 @@ body {
     color: #1e0021;
 }
 
-/* Form Content */
 .form-title {
     font-size: 32px;
     font-weight: 700;
@@ -160,7 +157,6 @@ body {
     color: #00ff87;
 }
 
-/* Buttons */
 .submit-btn {
     width: 100%;
     padding: 14px;
@@ -185,7 +181,6 @@ body {
     transform: translateY(0);
 }
 
-/* Divider */
 .divider-container {
     display: flex;
     align-items: center;
@@ -210,7 +205,6 @@ body {
     margin-left: .75em;
 }
 
-/* Social Buttons */
 .social-buttons-list {
     display: flex;
     flex-direction: column;
@@ -245,7 +239,6 @@ body {
     font-size: 16px;
 }
 
-/* Footer Links */
 .footer-text {
     text-align: center;
     color: #b8a6c9;
@@ -265,7 +258,6 @@ body {
     color: #00ff87;
 }
 
-/* Promo Card Section (Right Side) */
 .promo-section {
     flex: 0.8;
     background: #1e0021;
@@ -298,7 +290,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* Carousel */
 .promo-carousel {
     width: 100%;
     position: relative;
@@ -360,7 +351,6 @@ body {
     padding: 0 10px;
 }
 
-/* Dots */
 .carousel-dots {
     display: flex;
     gap: 8px;
@@ -382,14 +372,13 @@ body {
     transform: scale(1.25);
 }
 
-/* Responsive */
 @media (max-width: 992px) {
     .signin-container {
         flex-direction: column;
     }
     
     .promo-section {
-        display: none; /* Hide promo sidebar on mobile/tablet for pure form focus */
+        display: none;
     }
     
     .form-section {
