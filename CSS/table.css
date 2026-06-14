@@ -13,7 +13,6 @@ body{
     );
     display:flex;
     align-items:center;
-    padding-left:40px;
     margin-top: 80px;
 }
 
@@ -32,10 +31,6 @@ body{
         #4877d8,
         #30a6d7
     );
-    display:flex;
-    align-items:center;
-    gap:25px;
-    padding:0 20px;
 }
 
 .team-tabs button{
@@ -45,11 +40,14 @@ body{
     font-weight:600;
     font-size:16px;
     cursor:pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid transparent;
 }
 
-.team-tabs .active{
-    border-bottom:4px solid white;
-    padding-bottom:10px;
+.team-tabs button.active{
+    border-bottom-color: white;
 }
 
 .container-fluid{
@@ -176,7 +174,7 @@ body{
 
     .table-banner{
         height:90px;
-        padding-left:20px;
+        margin-top:70px;
     }
 
     .table-banner h1{
@@ -184,11 +182,24 @@ body{
     }
 
     .team-tabs{
-        gap:15px;
         overflow-x:auto;
+        white-space:nowrap;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
+    }
+
+    .team-tabs::-webkit-scrollbar{
+        display:none;
+    }
+
+    .team-tabs .container{
+        flex-wrap:nowrap;
+        padding-left:15px;
+        padding-right:15px;
     }
 
     .team-tabs button{
+        flex-shrink:0;
         font-size:14px;
     }
 
@@ -206,8 +217,27 @@ body{
         height:24px;
     }
 
+    .pl-table thead th{
+        font-size:12px;
+        padding:10px 8px;
+    }
+
     .pl-table tbody td{
-        font-size:13px;
+        font-size:12px;
+        padding:10px 8px;
+    }
+
+    .position{
+        font-size:14px;
+        width:40px;
+    }
+
+    .points{
+        font-size:15px;
+    }
+
+    .table-key{
+        padding:15px;
     }
 }
 
