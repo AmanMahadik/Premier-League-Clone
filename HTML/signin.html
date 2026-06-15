@@ -6,262 +6,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sign in or join myPL to customize your Premier League experience.">
     <title>Sign in - Premier League Clone</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/signin.css">
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <style>
-        .slide-graphic {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            color: white;
-            transition: transform 0.5s ease;
-        }
-        .slide-graphic:hover {
-            transform: scale(1.1);
-        }
-        .graphic-1 { background: linear-gradient(135deg, #00ff87, #3d195a); }
-        .graphic-2 { background: linear-gradient(135deg, #ff2882, #3d195a); }
-        .graphic-3 { background: linear-gradient(135deg, #04f5ff, #3d195a); }
-        .graphic-4 { background: linear-gradient(135deg, #e90052, #3d195a); }
-    </style>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="../CSS/signin.css">
 </head>
 
 <body>
 
-    <div class="signin-container">
-        
-        <div class="form-section">
-            
-            <div class="logo-header">
-                <a href="home.html">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="Premier League Logo">
-                    <span class="logo-text">Premier<br>League</span>
-                </a>
-            </div>
-
-            <div class="tab-container">
-                <button class="tab-btn active" id="tabSignInBtn">Sign In</button>
-                <button class="tab-btn" id="tabJoinBtn">Join myPL</button>
-            </div>
-
-            <h2 class="form-title" id="formTitle">Sign in</h2>
-
-            <form id="authForm">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
                 
-                <div class="form-group">
-                    <label class="form-label" for="emailInput">Email address</label>
-                    <input class="form-input" type="email" id="emailInput" placeholder="Enter email address" required>
+                <!-- Back Link -->
+                <div class="mb-4">
+                    <a href="home.html" class="text-white-50 text-decoration-none small">
+                        <i class="bi bi-arrow-left me-1"></i> Back to Home
+                    </a>
                 </div>
 
-                <div class="form-group" id="passwordGroup">
-                    <label class="form-label" for="passwordInput">Account password</label>
-                    <div class="input-wrapper">
-                        <input class="form-input" type="password" id="passwordInput" placeholder="••••••••" required>
-                        <button type="button" class="password-toggle-btn" id="passwordToggleBtn">
-                            <i class="bi bi-eye-slash" id="passwordToggleIcon"></i>
+                <!-- Main Login Card -->
+                <div class="login-card">
+                    
+                    <!-- Logo Header -->
+                    <div class="logo-header text-center mb-4">
+                        <a href="home.html" class="text-decoration-none d-inline-flex align-items-center gap-2">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="Premier League Logo" style="filter: brightness(0) invert(1);">
+                            <span class="text-white">Premier League</span>
+                        </a>
+                    </div>
+
+                    <!-- Authentication Tabs -->
+                    <ul class="nav nav-pills nav-fill nav-pills-custom mb-4" id="authTab">
+                        <li class="nav-item">
+                            <button class="nav-link active" id="tabSignInBtn" type="button">Sign In</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" id="tabJoinBtn" type="button">Join myPL</button>
+                        </li>
+                    </ul>
+
+                    <!-- Form Title -->
+                    <h2 class="h4 fw-bold text-center mb-4" id="formTitle">Sign in</h2>
+
+                    <!-- Credentials Form -->
+                    <form id="authForm" novalidate>
+                        
+                        <div class="mb-3">
+                            <label class="form-label" for="emailInput">Email Address</label>
+                            <input class="form-control" type="email" id="emailInput" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="mb-3" id="passwordGroup">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <label class="form-label mb-0" for="passwordInput">Password</label>
+                                <a href="#" class="text-accent text-decoration-none small" id="forgotPasswordLink">Forgot password?</a>
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" type="password" id="passwordInput" placeholder="••••••••" required>
+                                <button type="button" class="btn btn-outline-secondary" id="passwordToggleBtn">
+                                    <i class="bi bi-eye-slash" id="passwordToggleIcon"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-accent w-100 fw-bold py-2.5 mt-2" id="submitBtn">Sign in</button>
+
+                    </form>
+
+                    <!-- Divider -->
+                    <div class="d-flex align-items-center my-4 text-white-50">
+                        <hr class="flex-grow-1 border-secondary m-0">
+                        <span class="mx-3 small fw-bold">OR</span>
+                        <hr class="flex-grow-1 border-secondary m-0">
+                    </div>
+
+                    <!-- Social Login List -->
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-outline-light d-flex align-items-center justify-content-center gap-2 py-2">
+                            <i class="bi bi-google"></i>
+                            <span id="googleBtnText">Sign in with Google</span>
+                        </button>
+                        <button type="button" class="btn btn-outline-light d-flex align-items-center justify-content-center gap-2 py-2">
+                            <i class="bi bi-facebook"></i>
+                            <span id="facebookBtnText">Sign in with Facebook</span>
+                        </button>
+                        <button type="button" class="btn btn-outline-light d-flex align-items-center justify-content-center gap-2 py-2">
+                            <i class="bi bi-twitter-x"></i>
+                            <span id="twitterBtnText">Sign in with X</span>
+                        </button>
+                        <button type="button" class="btn btn-outline-light d-flex align-items-center justify-content-center gap-2 py-2">
+                            <i class="bi bi-apple"></i>
+                            <span id="appleBtnText">Sign in with Apple</span>
                         </button>
                     </div>
-                    <a href="#" class="forgot-password-link" id="forgotPasswordLink">Forgot password?</a>
-                </div>
 
-                <button type="submit" class="submit-btn" id="submitBtn">Sign in</button>
-
-            </form>
-
-            <div class="divider-container">Or</div>
-
-            <div class="social-buttons-list">
-                <button type="button" class="social-btn">
-                    <i class="bi bi-google"></i>
-                    <span id="googleBtnText">Sign in with Google</span>
-                </button>
-                <button type="button" class="social-btn">
-                    <i class="bi bi-facebook"></i>
-                    <span id="facebookBtnText">Sign in with Facebook</span>
-                </button>
-                <button type="button" class="social-btn">
-                    <i class="bi bi-twitter-x"></i>
-                    <span id="twitterBtnText">Sign in with X</span>
-                </button>
-                <button type="button" class="social-btn">
-                    <i class="bi bi-apple"></i>
-                    <span id="appleBtnText">Sign in with Apple</span>
-                </button>
-            </div>
-
-            <div class="footer-text" id="footerTextContainer">
-                <p id="problemsLink"><a href="#">Problems signing in? Contact us</a></p>
-                <p id="toggleAccountLink">Don't have an account? <a id="linkToRegister">Register now!</a></p>
-            </div>
-
-        </div>
-
-        <div class="promo-section">
-            <div class="promo-card">
-                <h3 class="promo-title">Shape the Premier League around you</h3>
-                
-                <div class="promo-carousel">
-                    <div class="carousel-slides">
-                        
-                        <div class="carousel-slide active">
-                            <div class="slide-image-container">
-                                <div class="slide-graphic graphic-1">
-                                    <i class="bi bi-person-check-fill"></i>
-                                </div>
-                            </div>
-                            <p class="slide-text">Choose your Clubs, Players and Matches with myPremierLeague</p>
-                        </div>
-
-                        <div class="carousel-slide">
-                            <div class="slide-image-container">
-                                <div class="slide-graphic graphic-2">
-                                    <i class="bi bi-headphones"></i>
-                                </div>
-                            </div>
-                            <p class="slide-text">Listen live with PL Radio, watch more with PL Originals and PL Stories from myPremierLeague</p>
-                        </div>
-
-                        <div class="carousel-slide">
-                            <div class="slide-image-container">
-                                <div class="slide-graphic graphic-3">
-                                    <i class="bi bi-bell-fill"></i>
-                                </div>
-                            </div>
-                            <p class="slide-text">Get the latest news, updates, and custom matchday notifications from your favourite club</p>
-                        </div>
-
-                        <div class="carousel-slide">
-                            <div class="slide-image-container">
-                                <div class="slide-graphic graphic-4">
-                                    <i class="bi bi-trophy-fill"></i>
-                                </div>
-                            </div>
-                            <p class="slide-text">Track your Fantasy Premier League team performance on the go and manage your transfers</p>
-                        </div>
-
+                    <!-- Footer Help Links -->
+                    <div class="text-center mt-4 small text-white-50" id="footerTextContainer">
+                        <p id="problemsLink" class="mb-2">
+                            <a href="#" class="text-white text-decoration-underline">Problems signing in? Contact us</a>
+                        </p>
+                        <p id="toggleAccountLink" class="mb-0">
+                            Don't have an account? <a id="linkToRegister" class="text-accent text-decoration-none fw-bold cursor-pointer">Register now!</a>
+                        </p>
                     </div>
+
                 </div>
 
-                <div class="carousel-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
             </div>
         </div>
-
     </div>
 
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Custom jQuery Tab & UI Switcher -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabSignInBtn = document.getElementById('tabSignInBtn');
-            const tabJoinBtn = document.getElementById('tabJoinBtn');
-            const formTitle = document.getElementById('formTitle');
-            const passwordGroup = document.getElementById('passwordGroup');
-            const passwordInput = document.getElementById('passwordInput');
-            const submitBtn = document.getElementById('submitBtn');
-            const googleBtnText = document.getElementById('googleBtnText');
-            const facebookBtnText = document.getElementById('facebookBtnText');
-            const twitterBtnText = document.getElementById('twitterBtnText');
-            const appleBtnText = document.getElementById('appleBtnText');
-            const problemsLink = document.getElementById('problemsLink');
-            const toggleAccountLink = document.getElementById('toggleAccountLink');
-            const linkToRegister = document.getElementById('linkToRegister');
+        $(document).ready(function () {
+            const $tabSignInBtn = $('#tabSignInBtn');
+            const $tabJoinBtn = $('#tabJoinBtn');
+            const $formTitle = $('#formTitle');
+            const $passwordGroup = $('#passwordGroup');
+            const $passwordInput = $('#passwordInput');
+            const $submitBtn = $('#submitBtn');
+            const $googleBtnText = $('#googleBtnText');
+            const $facebookBtnText = $('#facebookBtnText');
+            const $twitterBtnText = $('#twitterBtnText');
+            const $appleBtnText = $('#appleBtnText');
+            const $problemsLink = $('#problemsLink');
+            const $toggleAccountLink = $('#toggleAccountLink');
             
-            const passwordToggleBtn = document.getElementById('passwordToggleBtn');
-            const passwordInputEl = document.getElementById('passwordInput');
-            const passwordToggleIcon = document.getElementById('passwordToggleIcon');
+            const $passwordToggleBtn = $('#passwordToggleBtn');
+            const $passwordToggleIcon = $('#passwordToggleIcon');
 
-            passwordToggleBtn.addEventListener('click', function () {
-                if (passwordInputEl.type === 'password') {
-                    passwordInputEl.type = 'text';
-                    passwordToggleIcon.classList.remove('bi-eye-slash');
-                    passwordToggleIcon.classList.add('bi-eye');
+            // Password eye visibility toggle
+            $passwordToggleBtn.on('click', function () {
+                if ($passwordInput.attr('type') === 'password') {
+                    $passwordInput.attr('type', 'text');
+                    $passwordToggleIcon.removeClass('bi-eye-slash').addClass('bi-eye');
                 } else {
-                    passwordInputEl.type = 'password';
-                    passwordToggleIcon.classList.remove('bi-eye');
-                    passwordToggleIcon.classList.add('bi-eye-slash');
+                    $passwordInput.attr('type', 'password');
+                    $passwordToggleIcon.removeClass('bi-eye').addClass('bi-eye-slash');
                 }
             });
 
             function showSignIn() {
-                tabSignInBtn.classList.add('active');
-                tabJoinBtn.classList.remove('active');
-                formTitle.textContent = 'Sign in';
-                passwordGroup.style.display = 'block';
-                passwordInput.setAttribute('required', 'required');
-                submitBtn.textContent = 'Sign in';
-                googleBtnText.textContent = 'Sign in with Google';
-                facebookBtnText.textContent = 'Sign in with Facebook';
-                twitterBtnText.textContent = 'Sign in with X';
-                appleBtnText.textContent = 'Sign in with Apple';
-                problemsLink.style.display = 'block';
-                toggleAccountLink.innerHTML = "Don't have an account? <a id='linkToRegister'>Register now!</a>";
+                $tabSignInBtn.addClass('active');
+                $tabJoinBtn.removeClass('active');
+                $formTitle.text('Sign in');
+                $passwordGroup.show();
+                $passwordInput.attr('required', 'required');
+                $submitBtn.text('Sign in');
+                $googleBtnText.text('Sign in with Google');
+                $facebookBtnText.text('Sign in with Facebook');
+                $twitterBtnText.text('Sign in with X');
+                $appleBtnText.text('Sign in with Apple');
+                $problemsLink.show();
+                $toggleAccountLink.html("Don't have an account? <a id='linkToRegister' class='text-accent text-decoration-none fw-bold cursor-pointer'>Register now!</a>");
                 
-                document.getElementById('linkToRegister').addEventListener('click', showJoin);
+                // Re-bind click event to dynamically replaced element
+                $('#linkToRegister').on('click', showJoin);
             }
 
             function showJoin() {
-                tabJoinBtn.classList.add('active');
-                tabSignInBtn.classList.remove('active');
-                formTitle.textContent = 'Join myPL';
-                passwordGroup.style.display = 'none';
-                passwordInput.removeAttribute('required');
-                submitBtn.textContent = 'Join with email';
-                googleBtnText.textContent = 'Join with Google';
-                facebookBtnText.textContent = 'Join with Facebook';
-                twitterBtnText.textContent = 'Join with X';
-                appleBtnText.textContent = 'Join with Apple';
-                problemsLink.style.display = 'none';
-                toggleAccountLink.innerHTML = "Have an account? <a id='linkToSignIn'>Sign in here</a>";
+                $tabJoinBtn.addClass('active');
+                $tabSignInBtn.removeClass('active');
+                $formTitle.text('Join myPL');
+                $passwordGroup.hide();
+                $passwordInput.removeAttr('required');
+                $submitBtn.text('Join with email');
+                $googleBtnText.text('Join with Google');
+                $facebookBtnText.text('Join with Facebook');
+                $twitterBtnText.text('Join with X');
+                $appleBtnText.text('Join with Apple');
+                $problemsLink.hide();
+                $toggleAccountLink.html("Have an account? <a id='linkToSignIn' class='text-accent text-decoration-none fw-bold cursor-pointer'>Sign in here</a>");
                 
-                document.getElementById('linkToSignIn').addEventListener('click', showSignIn);
+                // Re-bind click event to dynamically replaced element
+                $('#linkToSignIn').on('click', showSignIn);
             }
 
-            tabSignInBtn.addEventListener('click', showSignIn);
-            tabJoinBtn.addEventListener('click', showJoin);
-            linkToRegister.addEventListener('click', showJoin);
-
-            const slides = document.querySelectorAll('.carousel-slide');
-            const dots = document.querySelectorAll('.dot');
-            let currentSlide = 0;
-            let slideInterval;
-
-            function goToSlide(index) {
-                slides[currentSlide].classList.remove('active');
-                dots[currentSlide].classList.remove('active');
-                currentSlide = (index + slides.length) % slides.length;
-                slides[currentSlide].classList.add('active');
-                dots[currentSlide].classList.add('active');
-            }
-
-            function nextSlide() {
-                goToSlide(currentSlide + 1);
-            }
-
-            function startSlideShow() {
-                slideInterval = setInterval(nextSlide, 4000);
-            }
-
-            function stopSlideShow() {
-                clearInterval(slideInterval);
-            }
-
-            dots.forEach((dot, idx) => {
-                dot.addEventListener('click', () => {
-                    stopSlideShow();
-                    goToSlide(idx);
-                    startSlideShow();
-                });
-            });
-
-            startSlideShow();
+            // Tab-click event listeners
+            $tabSignInBtn.on('click', showSignIn);
+            $tabJoinBtn.on('click', showJoin);
+            
+            // Initial click listener for the register link in footer
+            $(document).on('click', '#linkToRegister', showJoin);
         });
     </script>
 </body>

@@ -1,389 +1,166 @@
+/* Custom Premier League Theme Variables & Minimalist Styling */
+:root {
+    --pl-purple: #38003c;
+    --pl-dark-purple: #1e0021;
+    --pl-accent: #00ff87;
+    --pl-accent-hover: #00d270;
+    --pl-bg-card: #28002b;
+}
+
 body {
-    background: #1e0021;
+    background-color: var(--pl-dark-purple);
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: #ffffff;
     min-height: 100vh;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-.signin-container {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-}
-
-.form-section {
-    flex: 1.2;
-    padding: 40px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-.logo-header {
-    margin-bottom: 40px;
-}
-
-.logo-header a {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    gap: 12px;
+    justify-content: center;
+}
+
+/* Login Card Container */
+.login-card {
+    background-color: var(--pl-bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    width: 100%;
 }
 
 .logo-header img {
-    width: 50px;
-    height: auto;
+    height: 40px;
+    width: auto;
 }
 
-.logo-header .logo-text {
-    color: white;
-    font-size: 20px;
+.logo-header span {
+    font-size: 1.35rem;
     font-weight: 800;
-    line-height: 1.1;
+    letter-spacing: -0.5px;
 }
 
-.tab-container {
-    display: flex;
-    background: #2b0032;
-    border-radius: 30px;
+/* Custom Nav Pills for Tab Switching */
+.nav-pills-custom {
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 4px;
-    margin-bottom: 30px;
-    width: 100%;
-    max-width: 320px;
+    border-radius: 50px;
 }
 
-.tab-btn {
-    flex: 1;
-    background: transparent;
-    border: none;
-    color: #b8a6c9;
-    font-size: 14px;
+.nav-pills-custom .nav-link {
+    color: rgba(255, 255, 255, 0.6);
     font-weight: 600;
-    padding: 10px 0;
-    border-radius: 26px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    border: none;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
 }
 
-.tab-btn.active {
-    background: white;
-    color: #1e0021;
+.nav-pills-custom .nav-link.active {
+    background-color: var(--pl-purple);
+    color: #ffffff;
 }
 
-.form-title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 25px;
+.nav-pills-custom .nav-link:hover:not(.active) {
+    color: #ffffff;
 }
 
-.form-group {
-    margin-bottom: 20px;
-    position: relative;
-}
-
+/* Form Controls */
 .form-label {
-    display: block;
-    color: white;
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.input-wrapper {
-    position: relative;
-    width: 100%;
-}
-
-.form-input {
-    width: 100%;
-    padding: 12px 16px;
-    border-radius: 8px;
-    background: #2b0032;
+.form-control {
+    background-color: rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    color: white;
-    font-size: 15px;
-    font-family: inherit;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
+    color: #ffffff;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-input::placeholder {
+.form-control:focus {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-color: var(--pl-accent);
+    color: #ffffff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 255, 135, 0.15);
+}
+
+.form-control::placeholder {
     color: rgba(255, 255, 255, 0.35);
 }
 
-.form-input:focus {
-    outline: none;
-    border-color: #00ff87;
-    background: #fff;
-    color: #1e0021;
+/* Password Toggle Button Styling */
+#passwordGroup .input-group .btn {
+    border-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: all 0.2s;
 }
 
-.password-toggle-btn {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
+#passwordGroup .input-group .btn:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#passwordGroup .input-group .form-control:focus ~ .btn {
+    border-color: var(--pl-accent);
+}
+
+/* Custom Buttons */
+.btn-accent {
+    background-color: var(--pl-accent);
+    color: var(--pl-dark-purple);
     border: none;
-    color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    padding: 0;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.3s;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease-in-out;
 }
 
-.form-input:focus ~ .password-toggle-btn {
-    color: rgba(30, 0, 33, 0.6);
-}
-
-.forgot-password-link {
-    display: block;
-    text-align: right;
-    color: #b8a6c9;
-    font-size: 12px;
-    text-decoration: none;
-    margin-top: 6px;
-    transition: color 0.3s;
-}
-
-.forgot-password-link:hover {
-    color: #00ff87;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 14px;
-    border-radius: 30px;
-    background: white;
-    color: #1e0021;
-    border: none;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    transition: all 0.3s ease;
-}
-
-.submit-btn:hover {
-    background: #00ff87;
+.btn-accent:hover {
+    background-color: var(--pl-accent-hover);
+    color: var(--pl-dark-purple);
     transform: translateY(-1px);
 }
 
-.submit-btn:active {
+.btn-accent:active {
     transform: translateY(0);
 }
 
-.divider-container {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 13px;
-    margin-bottom: 25px;
-}
-
-.divider-container::before,
-.divider-container::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.divider-container:not(:empty)::before {
-    margin-right: .75em;
-}
-
-.divider-container:not(:empty)::after {
-    margin-left: .75em;
-}
-
-.social-buttons-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 30px;
-}
-
-.social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    padding: 12px;
-    border-radius: 30px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    color: white;
-    font-size: 14px;
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 0.9rem;
     font-weight: 500;
-    font-family: inherit;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+/* Typography utilities */
+.text-accent {
+    color: var(--pl-accent);
+    transition: color 0.2s ease;
+}
+
+.text-accent:hover {
+    color: var(--pl-accent-hover);
+}
+
+.cursor-pointer {
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-.social-btn:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: white;
-}
-
-.social-btn i {
-    font-size: 16px;
-}
-
-.footer-text {
-    text-align: center;
-    color: #b8a6c9;
-    font-size: 13px;
-    margin-top: 10px;
-}
-
-.footer-text a {
-    color: white;
-    text-decoration: underline;
-    font-weight: 600;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.footer-text a:hover {
-    color: #00ff87;
-}
-
-.promo-section {
-    flex: 0.8;
-    background: #1e0021;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-}
-
-.promo-card {
-    background: #2b0032;
-    border-radius: 24px;
-    width: 100%;
-    max-width: 440px;
-    padding: 40px 30px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 500px;
-    justify-content: space-between;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-.promo-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: white;
-    line-height: 1.2;
-    margin-bottom: 30px;
-}
-
-.promo-carousel {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.carousel-slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-}
-
-.carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.carousel-slide.active {
-    opacity: 1;
-    position: relative;
-}
-
-.slide-image-container {
-    width: 100%;
-    max-width: 240px;
-    height: 140px;
-    background: linear-gradient(135deg, #3d195a, #00ff87);
-    border-radius: 12px;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-.slide-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide-text {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #b8a6c9;
-    padding: 0 10px;
-}
-
-.carousel-dots {
-    display: flex;
-    gap: 8px;
-    margin-top: 30px;
-    justify-content: center;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dot.active {
-    background: #00ff87;
-    transform: scale(1.25);
-}
-
-@media (max-width: 992px) {
-    .signin-container {
-        flex-direction: column;
-    }
-    
-    .promo-section {
-        display: none;
-    }
-    
-    .form-section {
-        padding: 40px 20px;
-        min-height: 100vh;
-        max-width: 480px;
+/* Adjustments for smaller devices */
+@media (max-width: 576px) {
+    .login-card {
+        padding: 1.5rem;
     }
 }
