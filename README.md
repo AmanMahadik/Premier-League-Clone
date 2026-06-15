@@ -48,16 +48,3 @@ Premier-League-Clone/
 │   └── ...
 │
 └── IMAGES/
-🎯 Project Goal
-
-The goal of this project is to practice modern front-end development by building a real-world sports website interface inspired by the Premier League. It focuses on responsive design, component reusability, user experience, and clean UI implementation using core web technologies.
-
-📸 Preview
-
-A visually appealing football portal featuring:
-
-Latest football news
-Transfer updates
-Player and club information
-Interactive fan engagement sections
-Premier League-style branding and navigation

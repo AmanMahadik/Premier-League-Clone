@@ -1,390 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premier League Matches">
     <title>Matches - Premier League Clone</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../CSS/home.css">
     <link rel="stylesheet" href="../CSS/sidebar.css">
     <link rel="stylesheet" href="../CSS/matches.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
 
-<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
-<div class="sidebar-drawer" id="sidebarDrawer">
-    <div class="sidebar-header">
-        <div class="sidebar-logo">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
-            <span class="logo-text">Premier<br>League</span>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <div class="sidebar-drawer" id="sidebarDrawer">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
+                <span class="logo-text">Premier<br>League</span>
+            </div>
+            <button class="close-sidebar-btn" id="closeSidebarBtn">
+                <i class="bi bi-x-lg"></i>
+            </button>
         </div>
-        <button class="close-sidebar-btn" id="closeSidebarBtn">
-            <i class="bi bi-x-lg"></i>
-        </button>
+        <div class="sidebar-body">
+            <button class="sidebar-login-btn">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
+                Login
+            </button>
+            <ul class="sidebar-nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="fantasy.html">Fantasy </a></li>
+                <li><a href="transfers.html">Transfers</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="news.html">News </a></li>
+                <li>
+                    <a href="#" class="sidebar-more-toggle collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#sidebarMoreCollapse" aria-expanded="false">
+                        More <i class="bi bi-chevron-down ms-1"></i>
+                    </a>
+                    <div class="collapse" id="sidebarMoreCollapse">
+                        <ul class="sidebar-submenu-list">
+                            <li><a href="home.html">Premier League</a></li>
+                            <li><a href="https://shop.premierleague.com/gb/en/home/?_gl=1*ze5i2o*_gcl_au*MTA0NTIyNjQ2NS4xNzgxMTYwNzYz*_ga*MTI1NDc5NjI5OS4xNzY5MjczMDY4*_ga_Z815NWVZJY*czE3ODEyNzQ4OTAkbzMkZzAkdDE3ODEyNzQ4OTMkajU3JGwwJGgw"
+                                    target="_blank">Shop</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="community.html">Football & Community</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="media.html">Media</a></li>
+                            <li><a href="archive.html">The Archive</a></li>
+                            <li><a href="more.html">Partners</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="sidebar-body">
-        <button class="sidebar-login-btn">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo">
-            Login
-        </button>
-                <ul class="sidebar-nav-list">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="matches.html">Matches</a></li>
-            <li><a href="table.html">Table</a></li>
-            <li><a href="statistics.html">Statistics</a></li>
-            <li><a href="fantasy.html">Fantasy <i class="bi bi-chevron-right"></i></a></li>
-            <li><a href="transfers.html">Transfers</a></li>
-            <li><a href="players.html">Players</a></li>
-            <li><a href="clubs.html">Clubs</a></li>
-            <li><a href="news.html">News <i class="bi bi-chevron-right"></i></a></li>
-            <li>
-                <a href="#" class="sidebar-more-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#sidebarMoreCollapse" aria-expanded="false">
-                    More <i class="bi bi-chevron-down ms-1"></i>
-                </a>
-                <div class="collapse" id="sidebarMoreCollapse">
-                    <ul class="sidebar-submenu-list">
-                        <li><a href="home.html">Premier League</a></li>
-                        <li><a href="https://shop.premierleague.com/gb/en/home/?_gl=1*ze5i2o*_gcl_au*MTA0NTIyNjQ2NS4xNzgxMTYwNzYz*_ga*MTI1NDc5NjI5OS4xNzY5MjczMDY4*_ga_Z815NWVZJY*czE3ODEyNzQ4OTAkbzMkZzAkdDE3ODEyNzQ4OTMkajU3JGwwJGgw" target="_blank">Shop</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="community.html">Football & Community</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="media.html">Media</a></li>
-                        <li><a href="archive.html">The Archive</a></li>
-                        <li><a href="more.html">Partners</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
 
-<div class="top-navbar">
-    <div class="container-fluid px-4">
-                    <ul class="top-menu">
+    <div class="top-navbar">
+        <div class="container-fluid px-4">
+            <ul class="top-menu">
                 <li><a href="home.html">Premier League</a></li>
-                <li><a href="https://shop.premierleague.com/gb/en/home/?_gl=1*ze5i2o*_gcl_au*MTA0NTIyNjQ2NS4xNzgxMTYwNzYz*_ga*MTI1NDc5NjI5OS4xNzY5MjczMDY4*_ga_Z815NWVZJY*czE3ODEyNzQ4OTAkbzMkZzAkdDE3ODEyNzQ4OTMkajU3JGwwJGgw" target="_blank">Shop</a></li>
+                <li><a href="https://shop.premierleague.com/gb/en/home/?_gl=1*ze5i2o*_gcl_au*MTA0NTIyNjQ2NS4xNzgxMTYwNzYz*_ga*MTI1NDc5NjI5OS4xNzY5MjczMDY4*_ga_Z815NWVZJY*czE3ODEyNzQ4OTAkbzMkZzAkdDE3ODEyNzQ4OTMkajU3JGwwJGgw"
+                        target="_blank">Shop</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="community.html">Football & Community</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="media.html">Media</a></li>
                 <li><a href="archive.html">The Archive</a></li>
             </ul>
-    </div>
-</div>
-
-<nav class="navbar navbar-expand-lg main-navbar">
-    <div class="container-fluid">
-        <button class="menu-btn">
-            <i class="bi bi-list"></i>
-        </button>
-        <a class="navbar-brand d-flex align-items-center" href="home.html">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo" width="50">
-            <div class="logo-text">
-                Premier<br>League
-            </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="matches.html">Matches</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="table.html">Table</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="statistics.html">Statistics</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="fantasy.html">Fantasy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="news.html">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="transfers.html">Transfers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="players.html">Players</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="clubs.html">Clubs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="more.html">More</a>
-                </li>
-            </ul>
-            <div class="right-section">
-                <button class="icon-btn"><i class="bi bi-stars"></i></button>
-                <button class="icon-btn"><i class="bi bi-search"></i></button>
-                <button class="signin-btn">Sign in</button>
-            </div>
         </div>
     </div>
-</nav>
 
-<div class="container my-4 pt-5">
-    <div class="matches-banner d-flex justify-content-between align-items-center">
-        <h1 class="matches-banner-title">Premier League Matches 2026</h1>
-        <button class="calendar-btn">
-            <i class="bi bi-calendar3"></i> Add fixtures to calendar
-        </button>
-    </div>
-
-    <div class="matches-tabs">
-        <a href="#" class="matches-tab active">First Team</a>
-        <a href="#" class="matches-tab">U21</a>
-        <a href="#" class="matches-tab">U18</a>
-    </div>
-
-    <div class="filter-bar">
-        <button class="filter-btn-icon"><i class="bi bi-sliders"></i></button>
-        <div class="dropdown d-inline-block">
-            <button class="filter-dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" id="competitionBtn">
-                Premier League <i class="bi bi-chevron-down"></i>
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container-fluid">
+            <button class="menu-btn">
+                <i class="bi bi-list"></i>
             </button>
-            <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item active" href="#">Premier League</a></li>
-            </ul>
-        </div>
-        <div class="dropdown d-inline-block">
-            <button class="filter-dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" id="seasonBtn">
-                2026/27 <i class="bi bi-chevron-down"></i>
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="logo"
+                    width="50">
+                <div class="logo-text">
+                    Premier<br>League
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-dark" id="seasonDropdown">
-                <li><a class="dropdown-item active" href="#" data-val="2026/27">2026/27</a></li>
-                <li><a class="dropdown-item" href="#" data-val="2025/26">2025/26</a></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="matches.html">Matches</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="table.html">Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="statistics.html">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fantasy.html">Fantasy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="transfers.html">Transfers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="players.html">Players</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clubs.html">Clubs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="more.html">More</a>
+                    </li>
+                </ul>
+                <div class="right-section">
+                    <button class="icon-btn"><i class="bi bi-stars"></i></button>
+                    <button class="icon-btn"><i class="bi bi-search"></i></button>
+                    <button class="signin-btn">Sign in</button>
+                </div>
+            </div>
         </div>
-        <div class="dropdown d-inline-block">
-            <button class="filter-dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" id="mwBtn">
-                MW1 <i class="bi bi-chevron-down"></i>
+    </nav>
+
+    <div class="container my-4 pt-5">
+        <div class="matches-banner d-flex justify-content-between align-items-center">
+            <h1 class="matches-banner-title">Premier League Matches 2026</h1>
+            <button class="calendar-btn">
+                <i class="bi bi-calendar3"></i> Add fixtures to calendar
             </button>
-            <ul class="dropdown-menu dropdown-menu-dark" id="mwDropdown">
-                <li><a class="dropdown-item active" href="#" data-val="MW1">MW1</a></li>
-                <li><a class="dropdown-item" href="#" data-val="MW2">MW2</a></li>
-                <li><a class="dropdown-item" href="#" data-val="MW3">MW3</a></li>
-            </ul>
-        </div>
-        <div class="dropdown d-inline-block">
-            <button class="filter-dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" id="clubsBtn">
-                Clubs <i class="bi bi-chevron-down"></i>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item active" href="#">All Clubs</a></li>
-            </ul>
-        </div>
-        <button class="reset-filter-btn" id="resetBtn"><i class="bi bi-arrow-clockwise"></i> Reset</button>
-    </div>
-
-    <div class="matchweek-nav">
-        <button class="nav-circle-btn"><i class="bi bi-chevron-left"></i></button>
-        <div class="text-center">
-            <span class="matchweek-title d-block">Matchweek 1</span>
-            <span class="matchweek-subtitle text-white-50 small" id="mwSubtitle"></span>
-        </div>
-        <button class="nav-circle-btn"><i class="bi bi-chevron-right"></i></button>
-    </div>
-
-    <div class="no-data-card" id="noDataCard">
-        <span class="no-data-text">There is no match data available</span>
-    </div>
-
-    <div class="matches-list-card" id="matchesListCard" style="display: none;">
-        <div class="match-day-group">
-            <div class="match-day-header d-flex justify-content-between align-items-center">
-                <span class="match-day-title">Sat 16 Aug</span>
-                <button class="live-blog-btn">Live blog <i class="bi bi-chevron-right"></i></button>
-            </div>
-            <div class="match-rows">
-                <div class="match-row d-flex align-items-center">
-                    <span class="match-status">FT</span>
-                    <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
-                        <span class="team-name text-end">Liverpool</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/14.svg" class="team-badge" alt="Liverpool">
-                        <span class="match-score">4 - 2</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/91.svg" class="team-badge" alt="Bournemouth">
-                        <span class="team-name text-start">Bournemouth</span>
-                    </div>
-                </div>
-                <div class="match-row d-flex align-items-center">
-                    <span class="match-status">FT</span>
-                    <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
-                        <span class="team-name text-end">Aston Villa</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/7.svg" class="team-badge" alt="Aston Villa">
-                        <span class="match-score">0 - 0</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/4.svg" class="team-badge" alt="Newcastle United">
-                        <span class="team-name text-start">Newcastle United</span>
-                    </div>
-                </div>
-                <div class="match-row d-flex align-items-center">
-                    <span class="match-status">FT</span>
-                    <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
-                        <span class="team-name text-end">Brighton and Hove Albion</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/36.svg" class="team-badge" alt="Brighton">
-                        <span class="match-score">1 - 1</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/54.svg" class="team-badge" alt="Fulham">
-                        <span class="team-name text-start">Fulham</span>
-                    </div>
-                </div>
-                <div class="match-row d-flex align-items-center">
-                    <span class="match-status">FT</span>
-                    <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
-                        <span class="team-name text-end">Sunderland</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/56.svg" class="team-badge" alt="Sunderland">
-                        <span class="match-score">3 - 0</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/21.svg" class="team-badge" alt="West Ham United">
-                        <span class="team-name text-start">West Ham United</span>
-                    </div>
-                </div>
-                <div class="match-row d-flex align-items-center">
-                    <span class="match-status">FT</span>
-                    <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
-                        <span class="team-name text-end">Tottenham Hotspur</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/6.svg" class="team-badge" alt="Tottenham Hotspur">
-                        <span class="match-score">3 - 0</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/90.svg" class="team-badge" alt="Burnley">
-                        <span class="team-name text-start">Burnley</span>
-                    </div>
-                </div>
-                <div class="match-row d-flex align-items-center">
-                    <span class="match-status">FT</span>
-                    <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
-                        <span class="team-name text-end">Wolverhampton Wanderers</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/38.svg" class="team-badge" alt="Wolverhampton Wanderers">
-                        <span class="match-score">0 - 4</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/43.svg" class="team-badge" alt="Manchester City">
-                        <span class="team-name text-start">Manchester City</span>
-                    </div>
-                </div>
-            </div>
         </div>
 
-        <div class="match-day-group">
-            <div class="match-day-header d-flex justify-content-between align-items-center">
-                <span class="match-day-title">Sun 17 Aug</span>
-                <button class="live-blog-btn">Live blog <i class="bi bi-chevron-right"></i></button>
-            </div>
-            <div class="match-rows">
-                <div class="match-row d-flex align-items-center">
-                    <span class="match-status">FT</span>
-                    <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
-                        <span class="team-name text-end">Chelsea</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/8.svg" class="team-badge" alt="Chelsea">
-                        <span class="match-score">0 - 0</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/31.svg" class="team-badge" alt="Crystal Palace">
-                        <span class="team-name text-start">Crystal Palace</span>
-                    </div>
-                </div>
-                <div class="match-row d-flex align-items-center">
-                    <span class="match-status">FT</span>
-                    <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
-                        <span class="team-name text-end">Nottingham Forest</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/17.svg" class="team-badge" alt="Nottingham Forest">
-                        <span class="match-score">3 - 1</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/94.svg" class="team-badge" alt="Brentford">
-                        <span class="team-name text-start">Brentford</span>
-                    </div>
-                </div>
-                <div class="match-row d-flex align-items-center">
-                    <span class="match-status">FT</span>
-                    <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
-                        <span class="team-name text-end">Manchester United</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/1.svg" class="team-badge" alt="Manchester United">
-                        <span class="match-score">0 - 1</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/3.svg" class="team-badge" alt="Arsenal">
-                        <span class="team-name text-start">Arsenal</span>
-                    </div>
-                </div>
-            </div>
+        <div class="matches-tabs">
+            <a href="#" class="matches-tab active">First Team</a>
+            <a href="#" class="matches-tab">U21</a>
+            <a href="#" class="matches-tab">U18</a>
         </div>
 
-        <div class="match-day-group">
-            <div class="match-day-header d-flex justify-content-between align-items-center">
-                <span class="match-day-title">Tue 19 Aug</span>
-                <button class="live-blog-btn">Live blog <i class="bi bi-chevron-right"></i></button>
+        <div class="filter-bar">
+            <button class="filter-btn-icon"><i class="bi bi-sliders"></i></button>
+            <div class="dropdown d-inline-block">
+                <button class="filter-dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    id="competitionBtn">
+                    Premier League <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item active" href="#">Premier League</a></li>
+                </ul>
             </div>
-            <div class="match-rows">
-                <div class="match-row d-flex align-items-center">
-                    <span class="match-status">FT</span>
-                    <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
-                        <span class="team-name text-end">Leeds United</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/2.svg" class="team-badge" alt="Leeds United">
-                        <span class="match-score">1 - 0</span>
-                        <img src="https://resources.premierleague.com/premierleague25/badges-alt/11.svg" class="team-badge" alt="Everton">
-                        <span class="team-name text-start">Everton</span>
-                    </div>
-                </div>
+            <div class="dropdown d-inline-block">
+                <button class="filter-dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    id="seasonBtn">
+                    2026/27 <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" id="seasonDropdown">
+                    <li><a class="dropdown-item active" href="#" data-val="2026/27">2026/27</a></li>
+                    <li><a class="dropdown-item" href="#" data-val="2025/26">2025/26</a></li>
+                </ul>
             </div>
+            <div class="dropdown d-inline-block">
+                <button class="filter-dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" id="mwBtn">
+                    MW1 <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" id="mwDropdown">
+                    <li><a class="dropdown-item active" href="#" data-val="MW1">MW1</a></li>
+                    <li><a class="dropdown-item" href="#" data-val="MW2">MW2</a></li>
+                    <li><a class="dropdown-item" href="#" data-val="MW3">MW3</a></li>
+                </ul>
+            </div>
+            <div class="dropdown d-inline-block">
+                <button class="filter-dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    id="clubsBtn">
+                    Clubs <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item active" href="#">All Clubs</a></li>
+                </ul>
+            </div>
+            <button class="reset-filter-btn" id="resetBtn"><i class="bi bi-arrow-clockwise"></i> Reset</button>
         </div>
-    </div>
 
-    <div class="news-section-header">
-        <h2 class="news-title">Around The Matchweek - News</h2>
-        <div class="scroll-btns">
+        <div class="matchweek-nav">
             <button class="nav-circle-btn"><i class="bi bi-chevron-left"></i></button>
+            <div class="text-center">
+                <span class="matchweek-title d-block">Matchweek 1</span>
+                <span class="matchweek-subtitle text-white-50 small" id="mwSubtitle"></span>
+            </div>
             <button class="nav-circle-btn"><i class="bi bi-chevron-right"></i></button>
         </div>
-    </div>
 
-    <div class="news-row row flex-nowrap overflow-auto pb-4 px-2" id="newsCardsRow" style="scrollbar-width: none; -ms-overflow-style: none;">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
-            <div class="news-card">
-                <div class="news-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600" class="news-card-img" alt="News 1">
+        <div class="no-data-card" id="noDataCard">
+            <span class="no-data-text">There is no match data available</span>
+        </div>
+
+        <div class="matches-list-card" id="matchesListCard" style="display: none;">
+            <div class="match-day-group">
+                <div class="match-day-header d-flex justify-content-between align-items-center">
+                    <span class="match-day-title">Sat 16 Aug</span>
+                    <button class="live-blog-btn">Live blog <i class="bi bi-chevron-right"></i></button>
                 </div>
-                <div class="news-card-body">
-                    <h3 class="news-card-title">The Briefing: Manager changes, transfer news, NBA drama and more</h3>
+                <div class="match-rows">
+                    <div class="match-row d-flex align-items-center">
+                        <span class="match-status">FT</span>
+                        <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
+                            <span class="team-name text-end">Liverpool</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/14.svg"
+                                class="team-badge" alt="Liverpool">
+                            <span class="match-score">4 - 2</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/91.svg"
+                                class="team-badge" alt="Bournemouth">
+                            <span class="team-name text-start">Bournemouth</span>
+                        </div>
+                    </div>
+                    <div class="match-row d-flex align-items-center">
+                        <span class="match-status">FT</span>
+                        <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
+                            <span class="team-name text-end">Aston Villa</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/7.svg"
+                                class="team-badge" alt="Aston Villa">
+                            <span class="match-score">0 - 0</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/4.svg"
+                                class="team-badge" alt="Newcastle United">
+                            <span class="team-name text-start">Newcastle United</span>
+                        </div>
+                    </div>
+                    <div class="match-row d-flex align-items-center">
+                        <span class="match-status">FT</span>
+                        <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
+                            <span class="team-name text-end">Brighton and Hove Albion</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/36.svg"
+                                class="team-badge" alt="Brighton">
+                            <span class="match-score">1 - 1</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/54.svg"
+                                class="team-badge" alt="Fulham">
+                            <span class="team-name text-start">Fulham</span>
+                        </div>
+                    </div>
+                    <div class="match-row d-flex align-items-center">
+                        <span class="match-status">FT</span>
+                        <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
+                            <span class="team-name text-end">Sunderland</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/56.svg"
+                                class="team-badge" alt="Sunderland">
+                            <span class="match-score">3 - 0</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/21.svg"
+                                class="team-badge" alt="West Ham United">
+                            <span class="team-name text-start">West Ham United</span>
+                        </div>
+                    </div>
+                    <div class="match-row d-flex align-items-center">
+                        <span class="match-status">FT</span>
+                        <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
+                            <span class="team-name text-end">Tottenham Hotspur</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/6.svg"
+                                class="team-badge" alt="Tottenham Hotspur">
+                            <span class="match-score">3 - 0</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/90.svg"
+                                class="team-badge" alt="Burnley">
+                            <span class="team-name text-start">Burnley</span>
+                        </div>
+                    </div>
+                    <div class="match-row d-flex align-items-center">
+                        <span class="match-status">FT</span>
+                        <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
+                            <span class="team-name text-end">Wolverhampton Wanderers</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/38.svg"
+                                class="team-badge" alt="Wolverhampton Wanderers">
+                            <span class="match-score">0 - 4</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/43.svg"
+                                class="team-badge" alt="Manchester City">
+                            <span class="team-name text-start">Manchester City</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-day-group">
+                <div class="match-day-header d-flex justify-content-between align-items-center">
+                    <span class="match-day-title">Sun 17 Aug</span>
+                    <button class="live-blog-btn">Live blog <i class="bi bi-chevron-right"></i></button>
+                </div>
+                <div class="match-rows">
+                    <div class="match-row d-flex align-items-center">
+                        <span class="match-status">FT</span>
+                        <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
+                            <span class="team-name text-end">Chelsea</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/8.svg"
+                                class="team-badge" alt="Chelsea">
+                            <span class="match-score">0 - 0</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/31.svg"
+                                class="team-badge" alt="Crystal Palace">
+                            <span class="team-name text-start">Crystal Palace</span>
+                        </div>
+                    </div>
+                    <div class="match-row d-flex align-items-center">
+                        <span class="match-status">FT</span>
+                        <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
+                            <span class="team-name text-end">Nottingham Forest</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/17.svg"
+                                class="team-badge" alt="Nottingham Forest">
+                            <span class="match-score">3 - 1</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/94.svg"
+                                class="team-badge" alt="Brentford">
+                            <span class="team-name text-start">Brentford</span>
+                        </div>
+                    </div>
+                    <div class="match-row d-flex align-items-center">
+                        <span class="match-status">FT</span>
+                        <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
+                            <span class="team-name text-end">Manchester United</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/1.svg"
+                                class="team-badge" alt="Manchester United">
+                            <span class="match-score">0 - 1</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/3.svg"
+                                class="team-badge" alt="Arsenal">
+                            <span class="team-name text-start">Arsenal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-day-group">
+                <div class="match-day-header d-flex justify-content-between align-items-center">
+                    <span class="match-day-title">Tue 19 Aug</span>
+                    <button class="live-blog-btn">Live blog <i class="bi bi-chevron-right"></i></button>
+                </div>
+                <div class="match-rows">
+                    <div class="match-row d-flex align-items-center">
+                        <span class="match-status">FT</span>
+                        <div class="match-teams-flex d-flex align-items-center justify-content-center flex-grow-1">
+                            <span class="team-name text-end">Leeds United</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/2.svg"
+                                class="team-badge" alt="Leeds United">
+                            <span class="match-score">1 - 0</span>
+                            <img src="https://resources.premierleague.com/premierleague25/badges-alt/11.svg"
+                                class="team-badge" alt="Everton">
+                            <span class="team-name text-start">Everton</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
-            <div class="news-card">
-                <div class="news-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1540747737956-37872404a82f?q=80&w=600" class="news-card-img" alt="News 2">
-                </div>
-                <div class="news-card-body">
-                    <h3 class="news-card-title">The Briefing: Jimenez's World Cup elation, donkeys get Arsenal socks</h3>
-                </div>
+
+        <div class="news-section-header">
+            <h2 class="news-title">Around The Matchweek - News</h2>
+            <div class="scroll-btns">
+                <button class="nav-circle-btn"><i class="bi bi-chevron-left"></i></button>
+                <button class="nav-circle-btn"><i class="bi bi-chevron-right"></i></button>
             </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
-            <div class="news-card">
-                <div class="news-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?q=80&w=600" class="news-card-img" alt="News 3">
-                </div>
-                <div class="news-card-body">
-                    <h3 class="news-card-title">FPL signings: Will Senesi still rack up defensive contributions at Spurs?</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
-            <div class="news-card">
-                <div class="news-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600" class="news-card-img" alt="News 4">
-                </div>
-                <div class="news-card-body">
-                    <h3 class="news-card-title">All you need to know as Ipswich Town are promoted to Premier League</h3>
+
+        <div class="news-row row flex-nowrap overflow-auto pb-4 px-2" id="newsCardsRow"
+            style="scrollbar-width: none; -ms-overflow-style: none;">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://resources.premierleague.pulselive.com/photo-resources/2026/06/09/1b2041d9-d4b5-4e19-ac6c-4c58e2a87086/Untitled-16_9-Landscape-13-.png?width=600"
+                            class="news-card-img" alt="News 1">
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-card-title">The Briefing: Manager changes, transfer news, NBA drama and more
+                        </h3>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
-            <div class="news-card">
-                <div class="news-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600" class="news-card-img" alt="News 5">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://resources.premierleague.pulselive.com/photo-resources/2026/06/11/5f38bdd0-1d4d-4ebe-82e3-d23051dd0d85/Arteta-Carrick-Emery.jpg?width=600"
+                            class="news-card-img" alt="News 2">
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-card-title">The Briefing: Jimenez's World Cup elation, donkeys get Arsenal socks
+                        </h3>
+                    </div>
                 </div>
-                <div class="news-card-body">
-                    <h3 class="news-card-title">Why Senesi looks... Zerbi's Spurs</h3>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://resources.thfc.pulselive.com/photo-resources/2026/06/05/88711129-ec78-45f5-a510-0c6a7ac2a017/nj965LXp.jpg?width=600&height=600"
+                            class="news-card-img" alt="News 3">
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-card-title">FPL signings: Will Senesi still rack up defensive contributions at
+                            Spurs?</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=600"
+                            class="news-card-img" alt="News 4">
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-card-title">All you need to know as Ipswich Town are promoted to Premier League
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 flex-shrink-0">
+                <div class="news-card">
+                    <div class="news-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600"
+                            class="news-card-img" alt="News 5">
+                    </div>
+                    <div class="news-card-body">
+                        <h3 class="news-card-title">Why Senesi looks... Zerbi's Spurs</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <div class="container my-4">
         <div class="partners-content-box">
@@ -392,49 +432,69 @@
             <div class="partners-grid">
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <span style="font-weight: 900; font-style: italic; font-size: 1.3rem; letter-spacing: 0.5px; color: white;">EA SPORTS <span style="color: #00ff87;">FC</span></span>
+                        <span
+                            style="font-weight: 900; font-style: italic; font-size: 1.3rem; letter-spacing: 0.5px; color: white;">EA
+                            SPORTS <span style="color: #00ff87;">FC</span></span>
                     </div>
                     <span class="partner-role">Lead Partner</span>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#ff0000"><path d="M13.966 2.056L22.956 22H18.91l-3.328-7.978H9.366L13.966 2.056zm-4.708 14.93h5.056L12.062 11.56l-2.804 5.426zM1.044 2h7.324L1.044 22V2z"/></svg>
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#ff0000">
+                            <path
+                                d="M13.966 2.056L22.956 22H18.91l-3.328-7.978H9.366L13.966 2.056zm-4.708 14.93h5.056L12.062 11.56l-2.804 5.426zM1.044 2h7.324L1.044 22V2z" />
+                        </svg>
                     </div>
                     <span class="partner-role">Official Creativity Partner</span>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#00aeef"><path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17V12L12 17L2 12V17Z"/></svg>
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#00aeef">
+                            <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17V12L12 17L2 12V17Z" />
+                        </svg>
                     </div>
                     <span class="partner-role">Official Bank</span>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <span style="font-family: 'Georgia', serif; font-weight: bold; font-style: italic; font-size: 1.4rem; color: #f40009; letter-spacing: -1px;">Coca-Cola</span>
+                        <span
+                            style="font-family: 'Georgia', serif; font-weight: bold; font-style: italic; font-size: 1.4rem; color: #f40009; letter-spacing: -1px;">Coca-Cola</span>
                     </div>
                     <span class="partner-role">Official Soft Drink</span>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#d4af37"><path d="M12 2a10 10 0 00-7.54 16.58c.28.32.74.37 1.07.12l4.9-3.68a2 2 0 012.4 0l4.9 3.68c.33.25.79.2 1.07-.12A10 10 0 0012 2zm0 13.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/></svg>
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="#d4af37">
+                            <path
+                                d="M12 2a10 10 0 00-7.54 16.58c.28.32.74.37 1.07.12l4.9-3.68a2 2 0 012.4 0l4.9 3.68c.33.25.79.2 1.07-.12A10 10 0 0012 2zm0 13.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" />
+                        </svg>
                     </div>
                     <span class="partner-role">Official Beer</span>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <svg viewBox="0 0 23 23" width="34" height="34"><rect width="10.5" height="10.5" fill="#f25022"/><rect x="11.5" width="10.5" height="10.5" fill="#7fba00"/><rect y="11.5" width="10.5" height="10.5" fill="#00a4ef"/><rect x="11.5" y="11.5" width="10.5" height="10.5" fill="#ffb900"/></svg>
+                        <svg viewBox="0 0 23 23" width="34" height="34">
+                            <rect width="10.5" height="10.5" fill="#f25022" />
+                            <rect x="11.5" width="10.5" height="10.5" fill="#7fba00" />
+                            <rect y="11.5" width="10.5" height="10.5" fill="#00a4ef" />
+                            <rect x="11.5" y="11.5" width="10.5" height="10.5" fill="#ffb900" />
+                        </svg>
                     </div>
                     <span class="partner-role">Official Cloud & AI Partner</span>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <svg viewBox="0 0 24 24" width="34" height="34" fill="white"><path d="M22 6.5c-1.5 0-3 1.5-3 3s1.5 3 3 3 3-1.5 3-3-1.5-3-3-3zm-6 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4 14.5c.3 1.3 1.4 2.5 2.8 2.5h6.4c1.4 0 2.5-1.2 2.8-2.5l1-4.5H3l1 4.5z"/></svg>
+                        <svg viewBox="0 0 24 24" width="34" height="34" fill="white">
+                            <path
+                                d="M22 6.5c-1.5 0-3 1.5-3 3s1.5 3 3 3 3-1.5 3-3-1.5-3-3-3zm-6 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM4 14.5c.3 1.3 1.4 2.5 2.8 2.5h6.4c1.4 0 2.5-1.2 2.8-2.5l1-4.5H3l1 4.5z" />
+                        </svg>
                     </div>
                     <span class="partner-role">Official Ball</span>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <span style="font-weight: 800; font-size: 0.95rem; letter-spacing: 0.5px; color: white;">AVERY DENNISON</span>
+                        <span style="font-weight: 800; font-size: 0.95rem; letter-spacing: 0.5px; color: white;">AVERY
+                            DENNISON</span>
                     </div>
                     <span class="partner-role">Official Licensee</span>
                 </div>
@@ -446,19 +506,22 @@
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <span style="font-weight: 800; font-size: 1.1rem; font-style: italic; letter-spacing: 1px; color: white;">REZZIL</span>
+                        <span
+                            style="font-weight: 800; font-size: 1.1rem; font-style: italic; letter-spacing: 1px; color: white;">REZZIL</span>
                     </div>
                     <span class="partner-role">Official Licensee</span>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <span style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; color: #00ff87;">sorare</span>
+                        <span
+                            style="font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; color: #00ff87;">sorare</span>
                     </div>
                     <span class="partner-role">Official Licensee</span>
                 </div>
                 <div class="partner-card">
                     <div class="partner-logo-wrapper">
-                        <span style="font-family: 'Impact', sans-serif; font-size: 1.5rem; letter-spacing: 1px; color: #e90052; font-style: italic;">Topps</span>
+                        <span
+                            style="font-family: 'Impact', sans-serif; font-size: 1.5rem; letter-spacing: 1px; color: #e90052; font-style: italic;">Topps</span>
                     </div>
                     <span class="partner-role">Official Licensee</span>
                 </div>
@@ -466,16 +529,17 @@
         </div>
     </div>
 
-<footer class="footer-section mt-5">
-    <div class="container text-center">
-        <p class="text-white-50 small mb-0">&copy; Premier League Clone 2026.</p>
-    </div>
-</footer>
-<button id="backToTopBtn"><i class="bi bi-arrow-up-short"></i></button>
+    <footer class="footer-section mt-5">
+        <div class="container text-center">
+            <p class="text-white-50 small mb-0">&copy; Premier League Clone 2026.</p>
+        </div>
+    </footer>
+    <button id="backToTopBtn"><i class="bi bi-arrow-up-short"></i></button>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../SCRIPT/main.js"></script>
-<script src="../SCRIPT/matches.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../SCRIPT/main.js"></script>
+    <script src="../SCRIPT/matches.js"></script>
 </body>
+
 </html>
