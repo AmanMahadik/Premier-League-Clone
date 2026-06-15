@@ -156,3 +156,12 @@ body {
         padding: 1.5rem;
     }
 }
+
+#passwordHelp, #special, #capital, #number {
+    color: red;
+    margin-top: 3px;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
