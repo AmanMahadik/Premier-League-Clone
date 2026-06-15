@@ -1,4 +1,3 @@
-/* Custom Premier League Theme Variables & Minimalist Styling */
 :root {
     --pl-purple: #38003c;
     --pl-dark-purple: #1e0021;
@@ -17,7 +16,6 @@ body {
     justify-content: center;
 }
 
-/* Login Card Container */
 .login-card {
     background-color: var(--pl-bg-card);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -38,7 +36,6 @@ body {
     letter-spacing: -0.5px;
 }
 
-/* Custom Nav Pills for Tab Switching */
 .nav-pills-custom {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 4px;
@@ -64,7 +61,6 @@ body {
     color: #ffffff;
 }
 
-/* Form Controls */
 .form-label {
     font-size: 0.85rem;
     font-weight: 600;
@@ -92,12 +88,11 @@ body {
     color: rgba(255, 255, 255, 0.35);
 }
 
-/* Password Toggle Button Styling */
 #passwordGroup .input-group .btn {
     border-color: rgba(255, 255, 255, 0.15);
     color: rgba(255, 255, 255, 0.6);
     background-color: rgba(0, 0, 0, 0.15);
-    transition: all 0.2s;
+    transition: all 0.2;
 }
 
 #passwordGroup .input-group .btn:hover {
@@ -109,7 +104,6 @@ body {
     border-color: var(--pl-accent);
 }
 
-/* Custom Buttons */
 .btn-accent {
     background-color: var(--pl-accent);
     color: var(--pl-dark-purple);
@@ -144,7 +138,6 @@ body {
     color: #ffffff;
 }
 
-/* Typography utilities */
 .text-accent {
     color: var(--pl-accent);
     transition: color 0.2s ease;
@@ -158,7 +151,6 @@ body {
     cursor: pointer;
 }
 
-/* Adjustments for smaller devices */
 @media (max-width: 576px) {
     .login-card {
         padding: 1.5rem;

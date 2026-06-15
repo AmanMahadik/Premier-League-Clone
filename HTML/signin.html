@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sign in or join myPL to customize your Premier League experience.">
     <title>Sign in - Premier League Clone</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Custom Style -->
     <link rel="stylesheet" href="../CSS/signin.css">
 </head>
 
@@ -22,17 +18,14 @@
         <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
                 
-                <!-- Back Link -->
                 <div class="mb-4">
                     <a href="home.html" class="text-white-50 text-decoration-none small">
                         <i class="bi bi-arrow-left me-1"></i> Back to Home
                     </a>
                 </div>
 
-                <!-- Main Login Card -->
                 <div class="login-card">
                     
-                    <!-- Logo Header -->
                     <div class="logo-header text-center mb-4">
                         <a href="home.html" class="text-decoration-none d-inline-flex align-items-center gap-2">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="Premier League Logo" style="filter: brightness(0) invert(1);">
@@ -40,7 +33,6 @@
                         </a>
                     </div>
 
-                    <!-- Authentication Tabs -->
                     <ul class="nav nav-pills nav-fill nav-pills-custom mb-4" id="authTab">
                         <li class="nav-item">
                             <button class="nav-link active" id="tabSignInBtn" type="button">Sign In</button>
@@ -50,10 +42,8 @@
                         </li>
                     </ul>
 
-                    <!-- Form Title -->
                     <h2 class="h4 fw-bold text-center mb-4" id="formTitle">Sign in</h2>
 
-                    <!-- Credentials Form -->
                     <form id="authForm" novalidate>
                         
                         <div class="mb-3">
@@ -78,14 +68,12 @@
 
                     </form>
 
-                    <!-- Divider -->
                     <div class="d-flex align-items-center my-4 text-white-50">
                         <hr class="flex-grow-1 border-secondary m-0">
                         <span class="mx-3 small fw-bold">OR</span>
                         <hr class="flex-grow-1 border-secondary m-0">
                     </div>
 
-                    <!-- Social Login List -->
                     <div class="d-grid gap-2">
                         <button type="button" class="btn btn-outline-light d-flex align-items-center justify-content-center gap-2 py-2">
                             <i class="bi bi-google"></i>
@@ -105,7 +93,6 @@
                         </button>
                     </div>
 
-                    <!-- Footer Help Links -->
                     <div class="text-center mt-4 small text-white-50" id="footerTextContainer">
                         <p id="problemsLink" class="mb-2">
                             <a href="#" class="text-white text-decoration-underline">Problems signing in? Contact us</a>
@@ -121,10 +108,8 @@
         </div>
     </div>
 
-    <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     
-    <!-- Custom jQuery Tab & UI Switcher -->
     <script>
         $(document).ready(function () {
             const $tabSignInBtn = $('#tabSignInBtn');
@@ -143,7 +128,6 @@
             const $passwordToggleBtn = $('#passwordToggleBtn');
             const $passwordToggleIcon = $('#passwordToggleIcon');
 
-            // Password eye visibility toggle
             $passwordToggleBtn.on('click', function () {
                 if ($passwordInput.attr('type') === 'password') {
                     $passwordInput.attr('type', 'text');
@@ -168,7 +152,6 @@
                 $problemsLink.show();
                 $toggleAccountLink.html("Don't have an account? <a id='linkToRegister' class='text-accent text-decoration-none fw-bold cursor-pointer'>Register now!</a>");
                 
-                // Re-bind click event to dynamically replaced element
                 $('#linkToRegister').on('click', showJoin);
             }
 
@@ -186,15 +169,12 @@
                 $problemsLink.hide();
                 $toggleAccountLink.html("Have an account? <a id='linkToSignIn' class='text-accent text-decoration-none fw-bold cursor-pointer'>Sign in here</a>");
                 
-                // Re-bind click event to dynamically replaced element
                 $('#linkToSignIn').on('click', showSignIn);
             }
 
-            // Tab-click event listeners
             $tabSignInBtn.on('click', showSignIn);
             $tabJoinBtn.on('click', showJoin);
             
-            // Initial click listener for the register link in footer
             $(document).on('click', '#linkToRegister', showJoin);
         });
     </script>
