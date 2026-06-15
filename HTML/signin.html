@@ -176,6 +176,53 @@
             $tabJoinBtn.on('click', showJoin);
             
             $(document).on('click', '#linkToRegister', showJoin);
+
+            $('#authForm').on('submit', function (e) {
+                e.preventDefault();
+                
+                const email = $('#emailInput').val().trim();
+                const password = $('#passwordInput').val();
+                let isValid = true;
+                
+                $('.form-control').removeClass('is-invalid is-valid');
+                $('.invalid-feedback').remove();
+                $('.alert-success').remove();
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email || !emailRegex.test(email)) {
+                    $('#emailInput').addClass('is-invalid');
+                    $('#emailInput').after('<div class="invalid-feedback">Please enter a valid email address.</div>');
+                    isValid = false;
+                } else {
+                    $('#emailInput').addClass('is-valid');
+                }
+
+                if ($passwordGroup.is(':visible')) {
+                    if (!password || password.length < 6) {
+                        $('#passwordInput').addClass('is-invalid');
+                        $('#passwordInput').closest('.input-group').after('<div class="invalid-feedback">Password must be at least 6 characters.</div>');
+                        isValid = false;
+                    } else {
+                        $('#passwordInput').addClass('is-valid');
+                    }
+                }
+
+                if (isValid) {
+                    const actionType = $tabSignInBtn.hasClass('active') ? 'Sign-in' : 'Registration';
+                    
+                    const successAlert = `
+                        <div class="alert alert-success mt-3" role="alert">
+                            <i class="bi bi-check-circle-fill me-2"></i> ${actionType} successful! Redirecting...
+                        </div>
+                    `;
+                    $('#authForm').append(successAlert);
+                    $submitBtn.prop('disabled', true);
+                    
+                    setTimeout(function() {
+                        window.location.href = 'home.html';
+                    }, 1500);
+                }
+            });
         });
     </script>
 </body>
