@@ -40,6 +40,7 @@ $(document).ready(function () {
         }
 
         if (emailValid && passwordValid) {
+            localStorage.setItem("userEmail", email);
             $("#successMsg").text("Sign-in successful! Redirecting...");
 
             setTimeout(function () {

@@ -43,6 +43,7 @@
                             <label class="form-label" for="emailInput">Email Address</label>
                             <input class="form-control" type="email" id="emailInput" placeholder="Enter your email"
                                 required>
+                            <div id="emailMsg" class="text-danger small mt-1 fw-semibold"></div>
                         </div>
 
                         <div class="mb-3" id="passwordGroup">
@@ -58,9 +59,12 @@
                                     <i class="bi bi-eye-slash" id="passwordToggleIcon"></i>
                                 </button>
                             </div>
+                            <div id="passwordMsg" class="text-danger small mt-1 fw-semibold"></div>
                         </div>
 
                         <button type="submit" class="btn btn-accent w-100 fw-bold py-2.5 mt-2" id="submitBtn">Sign in</button>
+                        
+                        <div id="successMsg" class="text-success small text-center mt-3 fw-semibold"></div>
 
                     </form>
 
