@@ -1,111 +1,107 @@
 $(document).ready(function () {
-    const emailInput = $("#emailInput");
-    const passwordInput = $("#passwordInput");
-    const confirmPasswordInput = $("#confirmPasswordInput");
-    const authForm = $("#authForm");
-    const submitBtn = $("#submitBtn");
 
     $("#passwordToggleBtn").click(function () {
-        if (passwordInput.attr("type") === "password") {
-            passwordInput.attr("type", "text");
-            $("#passwordToggleIcon").removeClass("bi-eye-slash").addClass("bi-eye");
+        let password = $("#passwordInput");
+
+        if (password.attr("type") == "password") {
+            password.attr("type", "text");
+            $("#passwordToggleIcon").removeClass("bi-eye-slash");
+            $("#passwordToggleIcon").addClass("bi-eye");
         } else {
-            passwordInput.attr("type", "password");
-            $("#passwordToggleIcon").removeClass("bi-eye").addClass("bi-eye-slash");
+            password.attr("type", "password");
+            $("#passwordToggleIcon").removeClass("bi-eye");
+            $("#passwordToggleIcon").addClass("bi-eye-slash");
         }
     });
 
     $("#confirmPasswordToggleBtn").click(function () {
-        if (confirmPasswordInput.attr("type") === "password") {
-            confirmPasswordInput.attr("type", "text");
-            $("#confirmPasswordToggleIcon").removeClass("bi-eye-slash").addClass("bi-eye");
+        let confirmPassword = $("#confirmPasswordInput");
+
+        if (confirmPassword.attr("type") == "password") {
+            confirmPassword.attr("type", "text");
+            $("#confirmPasswordToggleIcon").removeClass("bi-eye-slash");
+            $("#confirmPasswordToggleIcon").addClass("bi-eye");
         } else {
-            confirmPasswordInput.attr("type", "password");
-            $("#confirmPasswordToggleIcon").removeClass("bi-eye").addClass("bi-eye-slash");
+            confirmPassword.attr("type", "password");
+            $("#confirmPasswordToggleIcon").removeClass("bi-eye");
+            $("#confirmPasswordToggleIcon").addClass("bi-eye-slash");
         }
     });
 
-    function updateCriteria(id, isValid) {
-        const el = $(id);
-        const icon = el.find("i");
-        if (isValid) {
-            el.css("color", "green");
-            icon.removeClass("bi-x-circle-fill").addClass("bi-check-circle-fill");
-        } else {
-            el.css("color", "red");
-            icon.removeClass("bi-check-circle-fill").addClass("bi-x-circle-fill");
-        }
-    }
+    $("#passwordInput").on("input", function () {
 
-    passwordInput.on("input", function () {
-        const password = $(this).val();
-        const lengthValid = password.length >= 8 && password.length <= 20;
-        const capitalValid = /[A-Z]/.test(password);
-        const numberValid = /[0-9]/.test(password);
-        const specialValid = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        let password = $(this).val();
 
-        updateCriteria("#passwordHelp", lengthValid);
-        updateCriteria("#capital", capitalValid);
-        updateCriteria("#number", numberValid);
-        updateCriteria("#special", specialValid);
+        let lengthValid = password.length >= 8 && password.length <= 20;
+        let capitalValid = /[A-Z]/.test(password);
+        let numberValid = /[0-9]/.test(password);
+        let specialValid = /[^A-Za-z0-9]/.test(password);
+
+        $("#passwordHelp").css("color", lengthValid ? "green" : "red");
+        $("#capital").css("color", capitalValid ? "green" : "red");
+        $("#number").css("color", numberValid ? "green" : "red");
+        $("#special").css("color", specialValid ? "green" : "red");
     });
 
-    authForm.on("submit", function (event) {
-        event.preventDefault();
+    $("#authForm").submit(function (e) {
 
-        let isValid = true;
-        $(".form-control").removeClass("is-invalid is-valid");
-        $(".invalid-feedback").remove();
-        $(".alert").remove();
+        e.preventDefault();
 
-        const email = emailInput.val().trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email) {
-            emailInput.addClass("is-invalid").after('<div class="invalid-feedback">Email is required.</div>');
-            isValid = false;
-        } else if (!emailRegex.test(email)) {
-            emailInput.addClass("is-invalid").after('<div class="invalid-feedback">Please enter a valid email address.</div>');
-            isValid = false;
-        } else {
-            emailInput.addClass("is-valid");
+        let email = $("#emailInput").val().trim();
+        let password = $("#passwordInput").val();
+        let confirmPassword = $("#confirmPasswordInput").val();
+
+        let emailValid = false;
+        let passwordValid = false;
+        let confirmValid = false;
+
+        if (email == "") {
+            $("#emailMsg").text("Email is required");
+        }
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            $("#emailMsg").text("Enter valid email");
+        }
+        else {
+            $("#emailMsg").text("");
+            emailValid = true;
         }
 
-        const password = passwordInput.val();
-        const lengthValid = password.length >= 8 && password.length <= 20;
-        const capitalValid = /[A-Z]/.test(password);
-        const numberValid = /[0-9]/.test(password);
-        const specialValid = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        let lengthValid = password.length >= 8 && password.length <= 20;
+        let capitalValid = /[A-Z]/.test(password);
+        let numberValid = /[0-9]/.test(password);
+        let specialValid = /[^A-Za-z0-9]/.test(password);
 
-        if (!password) {
-            passwordInput.addClass("is-invalid").closest(".input-group").after('<div class="invalid-feedback">Password is required.</div>');
-            isValid = false;
-        } else if (!lengthValid || !capitalValid || !numberValid || !specialValid) {
-            passwordInput.addClass("is-invalid").closest(".input-group").after('<div class="invalid-feedback">Password does not meet the requirements.</div>');
-            isValid = false;
-        } else {
-            passwordInput.addClass("is-valid");
+        if (password == "") {
+            $("#passwordMsg").text("Password is required");
+        }
+        else if (!lengthValid || !capitalValid || !numberValid || !specialValid) {
+            $("#passwordMsg").text("Password does not meet requirements");
+        }
+        else {
+            $("#passwordMsg").text("");
+            passwordValid = true;
         }
 
-        const confirmPassword = confirmPasswordInput.val();
-        if (!confirmPassword) {
-            confirmPasswordInput.addClass("is-invalid").closest(".input-group").after('<div class="invalid-feedback">Please confirm your password.</div>');
-            isValid = false;
-        } else if (confirmPassword !== password) {
-            confirmPasswordInput.addClass("is-invalid").closest(".input-group").after('<div class="invalid-feedback">Passwords do not match.</div>');
-            isValid = false;
-        } else {
-            if (password && password === confirmPassword && lengthValid && capitalValid && numberValid && specialValid) {
-                confirmPasswordInput.addClass("is-valid");
-            }
+        if (confirmPassword == "") {
+            $("#confirmPasswordMsg").text("Confirm your password");
+        }
+        else if (confirmPassword != password) {
+            $("#confirmPasswordMsg").text("Passwords do not match");
+        }
+        else {
+            $("#confirmPasswordMsg").text("");
+            confirmValid = true;
         }
 
-        if (isValid) {
-            submitBtn.prop("disabled", true);
-            authForm.append('<div class="alert alert-success mt-3" role="alert"><i class="bi bi-check-circle-fill me-2"></i>Registration successful! Redirecting...</div>');
+        if (emailValid && passwordValid && confirmValid) {
+
+            $("#successMsg").text("Registration successful! Redirecting...");
 
             setTimeout(function () {
                 window.location.href = "signin.html";
             }, 1500);
         }
+
     });
+
 });
