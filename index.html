@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=HTML/home.html" />
-    <title>Premier League Clone - Redirecting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #1e0021;
+            background: radial-gradient(circle, #37003c 0%, #1e0021 100%);
             color: #ffffff;
             font-family: 'Poppins', sans-serif;
             display: flex;
@@ -14,20 +15,64 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
-        .redirect-box {
+
+        .splash-container {
             text-align: center;
+            animation: splashAnimation 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
-        a {
-            color: #00ff87;
-            text-decoration: none;
-            font-weight: bold;
+
+        .logo-wrapper {
+            margin-bottom: 20px;
+        }
+
+        .logo-wrapper img {
+            width: 120px;
+            height: 120px;
+            filter: brightness(0) invert(1);
+        }
+
+        .brand-text {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        @keyframes splashAnimation {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            35% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            70% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="redirect-box">
-        <p>Redirecting to the <a href="HTML/home.html">Premier League Clone Home Page</a>...</p>
+
+    <div class="splash-container">
+        <div class="logo-wrapper">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/premierleague.svg" alt="Premier League Logo">
+        </div>
+        <div class="brand-text">Premier League</div>
     </div>
+
+    <script>
+        setTimeout(function () {
+            window.location.href = "HTML/home.html";
+        }, 3000);
+    </script>
 </body>
 </html>
