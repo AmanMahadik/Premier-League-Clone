@@ -303,3 +303,13 @@ body {
         padding: 20px;
     }
 }
+
+.video-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
